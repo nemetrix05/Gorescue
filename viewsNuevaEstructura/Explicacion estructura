@@ -1,0 +1,33 @@
+Basicamente se pusieron todos los HTMLs en la carpeta views (app/views)
+
+Todas las fuentes y recursos utilizados deben ir en la carpeta "assets".
+
+Dentro de assets de acuerdo a la estructura que ya se tiene funcionando en la carpeta client(angular), se estan usando las siguientes carpetas cuyos equivalentes (en la antigua estructura) se muestran a la derecha: 
+
+assets/bootstrap*       = se creo utilizando una nueva descarga de bootstrap. 
+assets/font-awesome     = public/assets/font-awesome
+assets/img              = public/assets/img
+assets/js               = public/javascripts
+assets/css              = public/css
+assets/fonts**          = public/fonts
+
+*Las librerias de bootstrap se encuentran repetidas en assets/js y assets/css (habria que definir si dejan estas librerias dentro bootstrap o en las carpetas de js y css respectivamente) - Personalmente preferiria dejarlo en la carpeta de bootstrap unicamente.
+**En la carpeta de fonts se eliminaron los archivos de glyphicon de bootstrap ya que estan repetidos en la carpeta assets/bootstrap/fonts
+
+Carpetas nuevas adicionadas a la estructura y equivalencias:
+
+assets/thumbs           =public/thumbs
+assets/cssFromAssets*   =public/assets/css
+assets/scripts          =public/assets/scripts
+assets/plugins          =public/assets/plugins
+
+
+*Se adiciona por separado debido a que ya existe el archivo styles.css dentro de la carpeta assets/css (se debe definir si los archivos de esta carpeta se estan usando y en que, y probablemente mezclarlos en la carpeta de assets/css)
+
+La recomendacion es colocar todos los html con carpetas y subcarpetas que considere necesarias dentro de la carpeta /app/views/
+
+Y todas las fuentes con carpetas y subcarpetas en /assets/
+
+Todo los mas lo dejo a su criterio.
+
+
