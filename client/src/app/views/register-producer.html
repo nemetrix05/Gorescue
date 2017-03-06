@@ -1,0 +1,183 @@
+
+<!-- REGISTER PRODUCTOR -->
+<div class="page-inner">
+    <div class="container">
+    
+        <div class="content-area">
+
+            <header class="page-header-form">
+                <h1 class="page-title" style="text-align: center; margin-top: 5%">Regístrate</h1>
+            </header>
+
+            <div class="ui two column centered grid">
+                <h4 style="margin-bottom: 0">Regístrate con:</h4>
+                <div class="centered row">
+                        <a href="#" class="ui twitter button" style="margin: 5px"><i class="twitter icon"></i>Twitter</a>
+                        <a href="#" class="ui facebook button" style="margin: 5px"><i class="facebook icon"></i>FaceBook</a>
+                        <a href="#" class="ui google plus button" style="margin: 5px"><i class="google plus icon"></i>Google</a>
+                </div>     
+                <h4 style="margin:30px 0;">O llena el siguiente formulario</h4>
+            </div>
+
+            <div class="entry-content">
+                                  
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="row contact-generic">
+
+                        <div class="col-md-10 col-md-offset-1">
+
+                            <h5>Información corporativa</h5>
+
+                            <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.displayName.valid && registerForm.controls.displayName.touched}">
+                                <label for="txt_displayName">Nombre de la empresa o productor de eventos</label><br>
+                                <input id="txt_displayName" class="input_text required column" type="text" formControlName="displayName" [(ngModel)]="producer.displayName">
+                                <control-messages [control]="registerForm.controls.displayName"></control-messages>
+                            </div>
+                            <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.nit.valid && registerForm.controls.nit.touched}">
+                                <label for="txt_nit">Nit o rut</label><br>
+                                <input id="txt_nit" class="input_text required column" type="text" formControlName="nit" [(ngModel)]="producer.nit">
+                                <control-messages [control]="registerForm.controls.nit"></control-messages>
+                            </div>
+                            <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.address.valid && registerForm.controls.address.touched}">
+                                <label for="txt_address">Dirección</label><br>
+                                <input id="txt_address" class="input_text required column" type="text" formControlName="address" [(ngModel)]="producer.address">
+                                <control-messages [control]="registerForm.controls.address"></control-messages>
+                            </div>            
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.phone.valid && registerForm.controls.phone.touched}">
+                                        <label for="txt_phone">Teléfono fijo</label><br>
+                                        <input id="txt_phone" class="input_text required column" type="text" formControlName="phone" [(ngModel)]="producer.phone">
+                                        <control-messages [control]="registerForm.controls.phone"></control-messages>
+                                    </div>   
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.email.valid && registerForm.controls.email.touched}">
+                                        <label for="txt_email">E-mail</label><br>
+                                        <input id="txt_email" class="input_text required column" type="email" formControlName="email" [(ngModel)]="producer.email" >
+                                        <script type="text/javascript">console.log(registerForm.controls.email)</script>
+                                        <control-messages [control]="registerForm.controls.email"></control-messages>
+                                        
+                                    </div>                                                                      
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.mobile.valid && registerForm.controls.mobile.touched}">
+                                        <label for="txt_mobile">Celular</label><br>
+                                        <input id="txt_mobile" class="input_text required column" type="text" formControlName="mobile" [(ngModel)]="producer.mobile">
+                                        <control-messages [control]="registerForm.controls.mobile"></control-messages>
+                                    </div>
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.website.valid && registerForm.controls.website.touched}">
+                                        <label for="txt_website">Sitio web</label><br>
+                                        <input id="txt_website" class="input_text required column" type="text" formControlName="website" [(ngModel)]="producer.website">
+                                        <control-messages [control]="registerForm.controls.website"></control-messages>
+                                    </div>                                                         
+                                </div>
+
+                            </div>                                                                                       
+
+                            <h5>Información del representante legal</h5>                                                                  
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.nameRep.valid && registerForm.controls.nameRep.touched}">
+                                        <label for="txt_givename">Nombres</label><br>
+                                        <input id="txt_givename" class="input_text required column" type="text" formControlName="nameRep" [(ngModel)]="producer.nameRep">
+                                        <control-messages [control]="registerForm.controls.nameRep"></control-messages>
+                                    </div>      
+
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.lastnameRep.valid && registerForm.controls.lastnameRep.touched}">
+                                        <label for="txt_surname">Apellidos</label><br>
+                                        <input id="txt_surname" class="input_text required column" type="text"formControlName="lastnameRep" [(ngModel)]="producer.lastnameRep">
+                                        <control-messages [control]="registerForm.controls.lastnameRep"></control-messages>
+                                    </div>                                                         
+
+                                    <div [ngClass]="{'has-error':!registerForm.controls.typeDocRep.valid && registerForm.controls.typeDocRep.touched}">
+                                        <label for="txt_typedoc">Tipo de documento</label><br>
+                                        <select id="txt_typedoc" class="input_text required column" formControlName="typeDocRep" [(ngModel)]="producer.typeDocRep">
+                                            <option *ngFor="let docType of docTypes" [value]="docType.value">{{docType.display}}</option>
+                                        </select>
+                                        <control-messages [control]="registerForm.controls.typeDocRep"></control-messages>
+                                    </div>    
+
+                                     <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.documentRep.valid && registerForm.controls.documentRep.touched}">
+                                        <label for="txt_doc">Número de identificación</label><br>
+                                        <input id="txt_doc" class="input_text required column" type="text" formControlName="documentRep" [(ngModel)]="producer.documentRep">
+                                        <control-messages [control]="registerForm.controls.documentRep"></control-messages>
+                                    </div>  
+
+                                </div>
+                                <div class="col-md-6">
+
+                                   <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.phoneRep.valid && registerForm.controls.phoneRep.touched}">
+                                        <label for="txt_phone">Teléfono fijo</label><br>
+                                        <input id="txt_phone" class="input_text required column" type="text" formControlName="phoneRep" [(ngModel)]="producer.phoneRep">
+                                        <control-messages [control]="registerForm.controls.phoneRep"></control-messages>
+                                    </div>   
+
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.mobileRep.valid && registerForm.controls.mobileRep.touched}">
+                                        <label for="txt_mobile">Celular</label><br>
+                                        <input id="txt_mobile" class="input_text required column" type="text" formControlName="mobileRep" [(ngModel)]="producer.mobileRep">
+                                        <control-messages [control]="registerForm.controls.mobileRep"></control-messages>
+                                    </div>  
+
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerForm.controls.addressRep.valid && registerForm.controls.addressRep.touched}">
+                                        <label for="txt_addres">Dirección</label><br>
+                                        <input id="txt_addres" class="input_text required column" type="text" formControlName="addressRep" [(ngModel)]="producer.addressRep">
+                                        <control-messages [control]="registerForm.controls.addressRep"></control-messages>
+                                    </div>                                                    
+
+                                </div>                                                
+                            </div>     
+
+                            <h5>Tipos de eventos</h5>
+
+                            <div class="row">
+                                <div *ngFor="let et of eventTypes; let i=index">
+                                    <div class="clearfix" *ngIf="i % 4 == 0"></div>
+                                    <div class="col-md-3" >
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="eventType" value="{{et.value}}"/> {{et.display }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>                                            
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-4">
+                                    <div class="centered" style="margin-top:20px;" [ngClass]="{'has-error':!registerForm.controls.terms.valid && registerForm.controls.terms.touched}">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" formControlName="terms" value="Acepta">Acepto <strong>términos y condiciones</strong>
+                                            </label>
+                                        </div>
+                                        <control-messages [control]="registerForm.controls.terms"></control-messages>                     
+                                    </div>                                                                      
+                                    <div class="form-row field_submit">
+                                        <input type="submit" value="Enviar" id="contact_submit" class="ui button colored">
+                                        <span class="loading hide"><img src="assets/img/preloader.gif"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row notice_bar">
+                                <p class="notice notice_ok hide">Gracias por Registrarte.</p>
+                                <p class="notice notice_error hide">Debido a un error desconocido tu registro no ha podido ser efectuado. Por favor intenta registrarte luego.</p>
+                            </div>                                                                                                                                               
+                        </div><!--#END contain form-->
+
+
+                        
+
+                    </form> <!-- END #contact_form -->
+                    
+                
+            </div>
+
+        </div> <!-- END #primary -->
+
+        
+    </div>
+</div> <!-- END .page-inner -->
+
+
+
+
+                            

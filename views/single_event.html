@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Mobile Specific 
+    ========================================================================= -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+
+    <!-- Title Tag
+    ========================================================================= -->
+    <title>GoTicket</title>
+
+    <!-- Browser Specical Files
+    ========================================================================= -->
+    <!--[if lt IE 9]><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    
+    <!-- Site Favicon
+    ========================================================================= -->
+    <link rel="shortcut icon" href="#" title="Favicon" />
+
+    <!-- WP HEAD
+    ========================================================================= -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="../public/css/semantic.min.css">
+    <link rel="stylesheet" href="../public/css/royalslider.css">
+    <link rel="stylesheet" href="../public/css/rs-default.css">
+    <link rel="stylesheet" href="../public/css/music-player.css">
+    <link rel="stylesheet" href="../public/css/owl.carousel.css">
+    <link rel="stylesheet" href="../public/css/magnific-popup.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/own-style.css">
+    
+    <!-- Header JS -->
+    <script src="../public/javascripts/jquery-1.11.1.min.js"></script>
+    
+</head>
+<body>
+
+	<div id="page" class="hfeed site">
+		
+		 <header id="masthead" class="ui page site-header" role="banner">
+
+            <div id="search-container" class="search-box-wrapper">
+                <div class="container">
+                    <i class="big search icon"></i>
+                    <div class="search-box">
+                        <form action="http://example.com/" class="search-form" role="search" >
+                            <label style="width: 100%">
+                                <span class="screen-reader-text">Buscar:</span>
+                                <input type="search" name="s" value="" title="Press Enter to submit your search" placeholder="Buscar evento, artista, escenarios..." class="search-field" style="width: 100%">
+                            </label>
+                            <input type="submit" value="Search" class="search-submit">
+                        </form>
+                    </div>
+                </div>
+            </div><!--/ #search-container -->
+
+            <div class="topbar">
+                <div class="container">
+                    <div class="topbar_left fleft">
+                        <nav class="topbar_menu_left">
+                            <ul>
+                                <!-- <li><a href="index-2.html">Home</a></li>
+                                <li><a href="page_band.html">The Band</a></li>
+                                <li><a href="page_artists.html">Artists</a></li>
+                                <li><a href="page_contact.html">Contact</a></li> -->
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="search-toggle fright">
+                        <i class="search icon link icon"></i>
+                    </div>
+                    <div class="topbar_right fright">
+                        <nav class="topbar_menu_left">
+                            <ul>
+                                <li><a href="#">Mi cuenta</a></li>
+                                <li><a href="#" style="font-size: 12px"><i class="shopping cart link icon"></i></a></li>
+                                <li><a href="#">Checkout</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div> <!-- END .topbar -->
+
+            <div class="header">
+                <div class="container">
+                    <div class="logo_area fleft">
+                        <a href="index.html" rel="home">
+                            <img src="../public/img/logogo.png" alt="Site Logo">
+                        </a>
+                    </div>
+                    <div class="header_right fright">
+                        <a href="#" class="event_count_wrapper clearfix">
+                            <div class="event_countdown">
+                                
+                            </div>
+                            <span class="next_event_text">Próximo evento en:</span>
+                        </a>
+                    </div>
+                </div>
+            </div> <!-- END .header -->
+
+        </header><!-- END #masthead -->
+
+        <div id="boxed_content" class="boxed_content">
+            <div class="inner">
+            
+            <!-- Main menú -->
+            <nav id="primary-navigation" class="site-navigation primary-navigation clearfix" role="navigation">
+                <button class="menu-toggle"><i class="large content icon"></i></button>
+                <a href="#content" class="screen-reader-text skip-link">Skip to content</a>
+                <div class="menu-all-pages-container">
+                    <ul class="nav-menu">
+                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="#">Reventa</a></li>
+                        <li class="menu-item"><a href="#">Streaming</a></li>
+                        <li class="current-menu-item"><a href="page_events.html">Eventos</a>
+                           <!--  <ul class="sub-menu">
+                                <li><a href="page_events.html">Events Page</a></li>
+                                <li><a href="single_event.html">Single Event</a></li>
+                            </ul> -->
+                        </li>
+                       <!--  <li class="menu-item-has-children"><a href="page_albums.html">Discography</a>
+                            <ul class="sub-menu">
+                                <li><a href="page_albums.html">Album Page</a></li>
+                                <li><a href="single_album.html">Single Album</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children"><a href="page_news.html">News</a>
+                            <ul class="sub-menu">
+                                <li><a href="page_news.html">News Page</a></li>
+                                <li><a href="single_new.html">Single News</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children"><a href="page_videos_filterable.html">Videos</a>
+                            <ul class="sub-menu">
+                                <li><a href="page_videos_filterable.html">Videos Filterable</a></li>
+                                <li><a href="page_videos_lightbox.html">Videos Lightbox</a></li>
+                                <li><a href="page_videos_slideshow.html">Videos Slideshow</a></li>
+                                <li><a href="page_videos_embed.html">Videos Embed</a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li class="menu-item"><a href="page_gallery_filterable.html">Galería</a> -->
+                          <!--   <ul class="sub-menu">
+                                <li><a href="page_gallery_filterable.html">Gallery Filterable</a></li>
+                                <li><a href="page_gallery_slideshow.html">Gallery Slideshow</a></li>
+                                <li><a href="page_gallery_grid.html">Gallery Grid</a></li>
+                            </ul> -->
+                        <!-- </li> -->
+                        
+                        <li class="menu-item"><a href="#">WishList</a></li>
+                        <li class="menu-item"><a href="#">Productores</a></li>
+                        <!-- <li class="menu-item"><a href="page_contact.html">Contacto</a></li> -->
+                           <!--  <ul class="sub-menu">
+                                <li><a href="page_shortcodes.html">Shortcodes</a></li>
+                                <li><a href="page_contact.html">Contact</a></li>
+                            </ul> -->
+                        
+                    </ul>
+                </div>
+
+                <ul class="header_social">
+                    <li style="padding-right: 10px;"><a href="register-intro.html">Regístrate</a></li>
+                    <li style="padding-left: 10px; padding-right: 10px;"><a href="login-intro.html">Ingresa</a></li>
+                </ul>
+            </nav>
+
+			<div id="content" class="site-content">
+
+				<div class="page-inner">
+					<div class="container">
+                    
+						<div id="primary" class="content-area">
+							
+                            <header class="page-header">
+                                <h1 class="page-title">Nombre del Evento</h1>
+                            </header>
+
+                                <div class="event_single">
+                                
+                                    <div class="event_widget">
+
+                                        <div class="event_item has_map dark_shadow clearfix">
+                                            <div class="event_map">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.9514634977954!2d-122.08096280000004!3d37.414622099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb755a2bbfcef%3A0x7207e9609eaa06cd!2s1500+N+Shoreline+Blvd%2C+Mountain+View%2C+CA+94043!5e0!3m2!1sen!2s!4v1409742972066" width="600" height="250" frameborder="0" style="border:0"></iframe>
+                                            </div>
+                                            <div class="event_left">
+                                                <div class="event_date">00</div>
+                                                <div class="event_month">Mes</div>
+                                            </div>
+                                            <div class="event_detail">
+                                                <div class="event_time" style="display: inline-block; width: 100%"><i class="time icon" ></i> Fecha y Hora del evento <i style="margin-left: 1%" class="dollar icon" ></i>Valor Tickets</div>
+                                                <div class="event_location"><i class="map marker icon"></i> Lugar del evento</div>
+                                                <a href="#" class="event_button ui button colored">Comprar</a>
+                                            </div>
+                                        </div>
+                                        <article class="post">
+
+                                            <div class="entry-content">
+                                                <h2>Descripción</h2>
+                                                <p>Enim ad minima ven m, quis nost. Rum exercitationem ullam. Corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue Consectetur adipisci. Belit, sed quia non numquam eius modi tempora incidunt, ut labore et</p>
+                                                <p>Dolore ater magnam aliquam quaerat voluptatem. ut enim ad minima ven m, quis nost. Rum exercitationem ullam.  Corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit Fusce euismod consequat ante</p>
+                                            </div>
+
+                                        </article>
+
+                                    </div>
+                                </div>
+
+						</div> <!-- END #primary -->
+
+						<div id="secondary" class="widget-area" role="complementary">
+
+                                    <div id="albums_carousel" class="box_content_wrapper">
+                                        <h4 class="widget_heading">Nuestros Patrocinadores</h4>
+                                        <div class="box_content">
+                                            <div class="home_album_carousel owl-carousel">
+                                                
+                                                <div class="ac_item dark_shadow">
+                                                    <img src="../public/thumb/aside/sponsor1.png" alt="">
+                                                </div>
+
+                                                <div class="ac_item dark_shadow">
+                                                    <img src="../public/thumb/aside/sponsor2.png" alt="">
+                                                </div>
+                                                
+                                                <script type="text/javascript">
+                                                jQuery(document).ready(function($) {
+                                                        $(".home_album_carousel").owlCarousel({
+                                                            items : 1,
+                                                            itemsDesktop: [1199,2],
+                                                            itemsDesktopSmall: [979,1],
+                                                            itemsTablet: [768,2],
+                                                            navigationText: ['<i class="angle left icon"></i>','<i class="angle right icon"></i>'],
+                                                            lazyLoad : true,
+                                                            navigation : true
+                                                        });
+                                                });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            <aside class="widget event_widget" style="margin-top: 20px">
+                                <h4 class="widget-title">Otros Eventos</h4>
+                                <div class="widget-content">
+
+                                    <article class="post">
+                                        <div class="event_left">
+                                            <div class="event_date">23</div>
+                                            <div class="event_month">Mar</div>
+                                        </div>
+                                        <div class="event_detail">
+                                            <h2 class="event_title"><a href="#">Estéreo Picnic</a></h2>
+                                            <div class="event_time"><i class="time icon"></i> Marzo 23, 24, 25, 2017 9:00 AM</div>
+                                            <div class="event_location"><i class="map marker icon"></i> Parque Simón Bolivar</div>
+                                            <a href="single_event.html" class="event_button ui button">Comprar Tickets</a>
+                                        </div>
+                                    </article>
+
+                                    <article class="post">
+                                        <div class="event_left">
+                                            <div class="event_date">12</div>
+                                            <div class="event_month">Abr</div>
+                                        </div>
+                                        <div class="event_detail">
+                                            <h2 class="event_title"><a href="#">Justin Bieber</a></h2>
+                                            <div class="event_time"><i class="time icon"></i> Abril 12, 2017 7:00 PM</div>
+                                            <div class="event_location"><i class="map marker icon"></i> Estadio el Campín</div>
+                                            <a href="" style="background-color: #7E7E7E; cursor: default" class="event_button ui button">Agotado</a>
+                                        </div>
+                                    </article>
+                                    
+                                </div>
+                            </aside>
+
+                            <!-- <aside class="widget">
+                                <h4 class="widget-title">Highlight Videos</h4>
+                                <div class="widget-content dark_shadow">
+                                    <div class="video_lightbox">
+                                        <a class="popup-vimeo" href="https://vimeo.com/41132461">
+                                            <img src="http://b.vimeocdn.com/ts/284/709/284709146_640.jpg" alt="">
+                                            <span class="video_button"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </aside> -->
+
+                        </div> <!-- END secondary -->
+
+					</div>
+				</div> <!-- END .page-inner -->
+
+			</div><!-- END #content -->
+
+            </div>
+		</div> <!-- END #boxed-wrapper -->
+
+        <footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="container">
+                <div class="inner">
+                    <div class="four column stackable doubling ui grid">
+                        <div class="column">
+                            <aside class="widget">
+                                <h4 class="widget_heading">Acerca de GoTicket</h4>
+                                <div class="widget_content">
+                                    <p>Síguenos en nuestras redes sociales</p>
+                                    <a href="#" class="tiny ui twitter button"><i class="twitter icon"></i>Twitter</a>
+                                    <a href="#" class="tiny ui facebook button"><i class="facebook icon"></i>FaceBook</a>
+                                    <a href="#" class="tiny ui youtube button"><i class="youtube icon"></i>YouTube</a>
+                                    <a href="#" class="tiny ui soundcloud button"><i class="soundcloud icon"></i>SoundCloud</a>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column">
+                            <aside class="widget widget_nav_menu">
+                                <h4 class="widget_heading">Explore More</h4>
+                                <div class="widget_content">
+                                    <ul>
+                                        <li><a href="#">Our History</a></li>
+                                        <li><a href="#">Products</a></li>
+                                        <li><a href="#">Browse Events</a></li>
+                                        <li><a href="#">All Albums</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column">
+                            <aside class="widget widget_nav_menu">
+                                <h4 class="widget_heading">Explore More</h4>
+                                <div class="widget_content">
+                                    <ul>
+                                        <li><a href="#">Galleries</a></li>
+                                        <li><a href="#">Tour Videos</a></li>
+                                        <li><a href="#">Events Archive</a></li>
+                                        <li><a href="#">Latest Albums</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="column">
+                            <aside class="widget widget_twitter">
+                                <h4 class="widget_heading">Twitter Feed</h4>
+                                <div class="widget_content">
+                                    <ul>
+                                        <li>
+                                        Ut enim ad minim veniam <a href="http://t.co/LRyHvAcxeF">http://t.co/LRyHvAcxeF</a><br>
+                                        <small>July 17, 2014 09:07 pm</small>
+                                        </li>
+
+                                        <li>
+                                        Quis nostrud exercitation <a href="http://t.co/LRyHvAcxeF">http://t.co/LRyHvAcxeF</a><br>
+                                        <small>July 17, 2014 09:07 pm</small>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer_copy">
+                    <div class="two column stackable ui grid">
+                        <div class="column copy_left">
+                            <p><a href="#">Music & Band Template</a> Copyright © 2014. All Rights Reserved</p>
+                        </div>
+                        <div class="column copy_right">
+                            <p>SoundPro Music Template by <a href="http://www.wpcharming.com/">WPCharming</a>.</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+		</footer><!-- END #colophon-->
+
+	</div><!-- END #page -->
+
+   <!-- Footer JS -->
+    <script src="../public/javascripts/libs/semantic.min.js"></script>
+    <script src="../public/javascripts/libs/fitVids.min.js"></script>
+    <script src="../public/javascripts/libs/retina.min.js"></script>
+    <script src="../public/javascripts/libs/jquery.plugin.min.js"></script>
+    <script src="../public/javascripts/libs/jquery.countdown.min.js"></script>
+    <script src="../public/javascripts/libs/jquery.royalslider.min.js"></script>
+    <script src="../public/javascripts/libs/jquery.easing-1.3.js"></script>
+    <script src="../public/javascripts/libs/jquery.jplayer.js"></script>
+    <script src="../public/javascripts/libs/ttw-music-player.js"></script>
+    <script src="../public/javascripts/libs/owl.carousel.min.js"></script>
+    <script src="../public/javascripts/libs/jquery.magnific-popup.min.js"></script>
+    <script src="../public/javascripts/libs/jquery.imagesloaded.min.js"></script>
+    <script src="../public/javascripts/libs/isotope.pkgd.min.js"></script>
+    <script src="../public/javascripts/global.js"></script>
+
+</body>
+</html>

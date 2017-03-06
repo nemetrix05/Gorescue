@@ -1,0 +1,174 @@
+
+<!-- REGISTER FAN -->
+<div class="page-inner">
+    <div class="container">
+    
+        <div class="content-area">
+            <header class="page-header-form">
+                <h1 class="page-title" style="text-align: center; margin-top: 5%">Regístrate</h1>
+            </header>
+
+            <div class="ui two column centered grid">
+                <h4 style="margin-bottom: 0">Regístrate con:</h4>
+                <div class="centered row">
+                        <a href="#" class="ui twitter button" style="margin: 5px"><i class="twitter icon"></i>Twitter</a>
+                        <a href="#" class="ui facebook button" style="margin: 5px"><i class="facebook icon"></i>FaceBook</a>
+                        <a href="#" class="ui google plus button" style="margin: 5px"><i class="google plus icon"></i>Google</a>
+                </div>     
+                <h4 style="margin:30px 0;">O llena el siguiente formulario</h4>
+            </div>
+
+            <div class="entry-content">
+                                  
+                    <form [formGroup]="registerFanForm" (ngSubmit)="onSubmit()" class="row contact-generic">
+
+                        <div class="col-md-10 col-md-offset-1">
+
+                            <h5>Información de usuario</h5>
+
+                            <div class="centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.email.valid && registerFanForm.controls.email.touched}">
+                                <label for="txt_email">E-mail</label><br>
+                                <input id="txt_email" class="input_text required column" type="email" formControlName="email" [(ngModel)]="user.email" >
+                                <script type="text/javascript">console.log(registerFanForm.controls.email)</script>
+                                <control-messages [control]="registerFanForm.controls.email"></control-messages>
+                                
+                            </div>    
+
+                            <div class=" centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.password.valid && registerFanForm.controls.password.touched}">
+                                <label for="txt_pwd">Contraseña</label><br>
+                                <input id="txt_pwd" class="input_text required column" type="password" formControlName="password" [(ngModel)]="user.password">
+                                <control-messages [control]="registerFanForm.controls.password"></control-messages>
+                                
+                            </div>    
+                            
+                            <div class=" centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.password2.valid && registerFanForm.controls.password2.touched}">
+                                <label for="txt_pwd_2">Confirmar contraseña</label><br>
+                                <input id="txt_pwd_2" class="input_text required column" type="password" formControlName="password2" [(ngModel)]="user.rptPassword">
+                                <control-messages [control]="registerFanForm.controls.password2"></control-messages>
+                                
+                            </div>     
+
+                            <!-- Aqui va los datos faltantes -->
+                            <h5>Información de contacto</h5>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="centered field_text">
+
+                                        <div class="centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.name.valid && registerFanForm.controls.name.touched}">
+                                            <label for="txt_givename">Nombres</label><br>
+                                            <input id="txt_givename" class="input_text required column" type="text" formControlName="name" [(ngModel)]="user.name">
+                                            <control-messages [control]="registerFanForm.controls.name"></control-messages>
+                                        </div>      
+
+                                        <div class="centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.surname.valid && registerFanForm.controls.surname.touched}">
+                                            <label for="txt_surname">Apellidos</label><br>
+                                            <input id="txt_surname" class="input_text required column" type="text"formControlName="surname" [(ngModel)]="user.surname">
+                                            <control-messages [control]="registerFanForm.controls.surname"></control-messages>
+                                        </div>                                                            
+                                    </div>      
+                                                                                  
+                                </div>
+                                <div class="col-md-6">
+                                    <div [ngClass]="{'has-error':!registerFanForm.controls.typeDoc.valid && registerFanForm.controls.typeDoc.touched}">
+                                        <label for="txt_typedoc">Tipo de documento</label><br>
+                                        <select id="txt_typedoc" class="input_text required column" formControlName="typeDoc" [(ngModel)]="user.typeDoc">
+                                            <option *ngFor="let docType of docTypes" [value]="docType.value">{{docType.display}}</option>
+                                        </select>
+                                        <control-messages [control]="registerFanForm.controls.typeDoc"></control-messages>
+                                    </div>
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.document.valid && registerFanForm.controls.document.touched}">
+                                        <label for="txt_doc">Número de identificación</label><br>
+                                        <input id="txt_doc" class="input_text required column" type="text" formControlName="document" [(ngModel)]="user.document">
+                                        <control-messages [control]="registerFanForm.controls.document"></control-messages>
+                                    </div>    
+                                   
+                                </div>
+
+                            </div>                                                                      
+
+                            <div class=" centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.birthDate.valid && registerFanForm.controls.birthDate.touched}">
+
+                                <label for="txt_birthday">Fecha de nacimiento</label><br>
+                                <input type='text' class="input_text required column" id='datetimepickerfront' formControlName="birthDate" [(ngModel)]="user.birthDate" /> 
+                                <control-messages [control]="registerFanForm.controls.birthDate"></control-messages>                     
+                            </div>        
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.phone.valid && registerFanForm.controls.phone.touched}">
+                                        <label for="txt_phone">Teléfono fijo</label><br>
+                                        <input id="txt_phone" class="input_text required column" type="text" formControlName="phone" [(ngModel)]="user.phone">
+                                        <control-messages [control]="registerFanForm.controls.phone"></control-messages>
+                                    </div>   
+
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.mobile.valid && registerFanForm.controls.mobile.touched}">
+                                        <label for="txt_mobile">Celular</label><br>
+                                        <input id="txt_mobile" class="input_text required column" type="text" formControlName="mobile" [(ngModel)]="user.mobile">
+                                        <control-messages [control]="registerFanForm.controls.mobile"></control-messages>
+                                    </div>                                                        
+                                    <div [ngClass]="{'has-error':!registerFanForm.controls.country.valid && registerFanForm.controls.country.touched}">
+                                        <label for="txt_country">País</label><br>
+                                        <select id="txt_country" class="input_text required column" formControlName="country" [(ngModel)]="user.country">
+                                            <option *ngFor="let country of countries" [value]="country.value">{{country.display}}</option>
+                                        </select><br>   
+                                        <control-messages [control]="registerFanForm.controls.country"></control-messages>   
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div [ngClass]="{'has-error':!registerFanForm.controls.region.valid && registerFanForm.controls.region.touched}">
+                                        <label for="txt_region">Región</label><br>
+                                        <select id="txt_region" class="input_text required column" formControlName="region" [(ngModel)]="user.region">
+                                            <option *ngFor="let region of regions" [value]="region.value">{{region.display}}</option>
+                                        </select> 
+                                        <control-messages [control]="registerFanForm.controls.region"></control-messages>  
+                                    </div>
+                                    <div [ngClass]="{'has-error':!registerFanForm.controls.city.valid && registerFanForm.controls.city.touched}">
+                                        <label for="txt_city">Ciudad</label><br>
+                                        <select id="txt_city" class="input_text required column" formControlName="city" [(ngModel)]="user.city">
+                                            <option *ngFor="let city of cities" [value]="city.value">{{city.display}}</option>
+                                        </select>   
+                                        <control-messages [control]="registerFanForm.controls.city"></control-messages>  
+                                    </div>
+                                    <div class="centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.address.valid && registerFanForm.controls.address.touched}">
+                                        <label for="txt_addres">Dirección</label><br>
+                                        <input id="txt_addres" class="input_text required column" type="text" formControlName="address" [(ngModel)]="user.address">
+                                        <control-messages [control]="registerFanForm.controls.address"></control-messages>
+                                    </div>                                                                    
+                                </div>                                                
+                            </div> 
+
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-4">
+                                    <div class="centered" style="margin-top:20px;" [ngClass]="{'has-error':!registerFanForm.controls.terms.valid && registerFanForm.controls.terms.touched}">
+                                        <div class="checkbox">
+                                          <label><input type="checkbox" formControlName="terms" value="Acepta">Acepto <strong>términos y condiciones</strong></label>
+                                        </div>
+                                        <control-messages [control]="registerFanForm.controls.terms"></control-messages>                     
+                                    </div>                                                           
+                                    <div class="form-row field_submit">
+                                        <input type="submit" value="Enviar" class="ui button colored" [disabled]="!registerFanForm.valid">
+                                        <span class="loading hide"><img src="assets/img/preloader.gif"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row notice_bar">
+                                <p class="notice notice_ok" *ngIf="message">{{message}}</p>
+                                <p class="notice notice_error" *ngIf="errorMessage">{{errorMessage}}</p>
+                            </div>                                                                                                                                               
+                        </div><!--#END contain form-->
+
+
+                        
+
+                    </form> <!-- END #contact_form -->
+                    
+                
+            </div>
+
+        </div> <!-- END #primary -->
+
+        
+    </div>
+</div> <!-- END .page-inner -->
+<!-- END .REGISTER INTRO -->
