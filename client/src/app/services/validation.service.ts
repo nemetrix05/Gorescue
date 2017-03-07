@@ -1,4 +1,4 @@
-import { FormControl} from '@angular/forms';
+import { FormControl, FormGroup} from '@angular/forms';
 
 export class ValidationService {
     static getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
@@ -13,11 +13,14 @@ export class ValidationService {
             'termsAccepted':'Debe aceptar los terminos para continuar',
             'digits':'Digite únicamente números',
             'date':'Formato de fecha no válido',
-            'url':'Formato de url incorrecto. Utilice el prefijo http:// o https://'
+            'url':'Formato de url incorrecto. Utilice el prefijo http:// o https://',
+            'choice':`Se requiere al menos ${validatorValue.min} campo y máximo ${validatorValue.max}`
         };
         return config[validatorName];
     }
-
+    /**
+     * Valida la seguridad del campo de password
+     **/
     static passwordValidator(control:FormControl) {
         // {6,100}           - Assert password is between 6 and 100 characters
         // (?=.*[0-9])       - Assert a string has at least one number
@@ -29,7 +32,9 @@ export class ValidationService {
 	        }
 	    }
     }
-
+    /**
+     * Valida que los campos de password coincidan
+     **/
     static matchPasswordValidator(password: FormControl) {
 	    return (c: FormControl) => {
             if(password.value!=c.value){
@@ -39,26 +44,49 @@ export class ValidationService {
             }
         }
 	}
-
+    /**
+     * Valida el checkbox de terminos aceptados
+     **/
     static termsAccepted(control:FormControl) {
-        // {6,100}           - Assert password is between 6 and 100 characters
-        // (?=.*[0-9])       - Assert a string has at least one number
         if(control.value){
             return null;
         } else {
             return { 'termsAccepted': true };
         }
     }
+    
+    /**
+     * Valida la seleccion de al menos "min" campos (checkbox o inputs) y maximo "max" campos
+     * Por defecto min=1 y max=numero de controles del FormGroup.
+     **/
+    static choice(min:number=1,max:number=-1) {
 
-    static date(control:FormControl) {
-        //            - Assert date format dd/mm/yyyy
-        if(control.value){
-            if (control.value.match(/^(0[1-9]|[12][0-9]|3[01])[\/\-](0[1-9]|1[012])[\/\-]\d{4}$/)) {
+        return (formGroup: FormGroup) => {
+            let count=0;
+            let totalParams=0;
+            for (let key in formGroup.controls) {
+                if (formGroup.controls.hasOwnProperty(key)) {
+                    totalParams++;
+                    let control: FormControl = <FormControl>formGroup.controls[key];
+                    if (control.value) {
+                        count++;
+                    }
+                }
+            }
+            if(max>min && max!=-1){
+                totalParams=max;
+            }
+            if(count>=min && count<=totalParams){
                 return null;
-            } else {
-                return { 'date': true };
+            }else{
+                return {
+                    choice: {
+                        valid: false,
+                        min:min,
+                        max:totalParams
+                    }
+                };
             }
         }
     }
-	
 }

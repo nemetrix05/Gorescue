@@ -16,7 +16,7 @@ export class ProducerService{
 	registerProducer(producer){
 		let json=JSON.stringify(producer);
 		let params=json;
-
+		console.log(params);
 		let headers = new Headers({'Content-Type':'application/json'});
 
 		return this._http.post(this.url+'producers',params,{headers:headers})

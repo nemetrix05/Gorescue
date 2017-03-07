@@ -44,14 +44,14 @@ export class RegisterProducerComponent implements OnInit {
 	public eventTypes=[];
 
 	public registerForm: FormGroup;
+	public selEventTypes={};
 
 	constructor(private _route:ActivatedRoute,
 		private _router:Router,
 		private _producerService:ProducerService
 	){
 		this.title = 'REGÍSTRO COMO FAN';
-		this.loadFormData();
-		this.iniValidation();
+		
 		this.producer = new Producer(
 			'','','','','',
 			'','','','','',
@@ -59,34 +59,14 @@ export class RegisterProducerComponent implements OnInit {
 			'','','','',[],[]);
 	}
 
-	ngOnInit(){
-		console.log('Register producer component loaded');
+	cbclick(){
+		console.log(this.selEventTypes);
 	}
 
-
-	/**
-	 * Inicializa los parametros de validación de la forma
-	 **/
-	private iniValidation(){
-		let password =new FormControl('',[Validators.required,ValidationService.passwordValidator]);
-		this.registerForm= new FormGroup({
-			'password': password,
-			'displayName':new FormControl('',Validators.required),
-			'nit': new FormControl('',[Validators.required,CustomValidators.digits]),
-			'address':new FormControl('',Validators.required),
-			'phone':new FormControl('',[Validators.required,CustomValidators.digits]),
-			'email':new FormControl('',Validators.required,CustomValidators.email),
-			'mobile':new FormControl('',[Validators.required,CustomValidators.digits]),
-			'website':new FormControl('',[Validators.required,CustomValidators.url]),
-			'nameRep':new FormControl('',Validators.required),
-			'lastnameRep':new FormControl('',Validators.required),
-			'typeDocRep':new FormControl('',Validators.required),
-			'documentRep':new FormControl('',[Validators.required,CustomValidators.digits]),
-			'phoneRep':new FormControl('',[Validators.required,CustomValidators.digits]),
-			'mobileRep':new FormControl('',[Validators.required,CustomValidators.digits]),
-			'addressRep':new FormControl('',Validators.required),
-			'terms':new FormControl(false,ValidationService.termsAccepted)
-		});
+	ngOnInit(){
+		this.loadFormData();
+		this.iniValidation();
+		console.log('Register producer component loaded');
 	}
 
 	/**
@@ -118,18 +98,64 @@ export class RegisterProducerComponent implements OnInit {
 		    { value: 'TECNOLOGÍA', display: 'TECNOLOGÍA' ,col:4,checked:false},
 		    { value: 'LGBTI', display: 'LGBTI' ,col:4,checked:false}
 		];
+
+		for (let evtype of this.eventTypes) {
+			this.selEventTypes[evtype.value]=false;
+		}
+		console.log(this.selEventTypes);
 	}
+
+	/**
+	 * Inicializa los parametros de validación de la forma
+	 **/
+	private iniValidation(){
+
+		let eventTypesFormGroup = new FormGroup({},ValidationService.choice());
+	    for (let evtype of this.eventTypes) {
+	      let control: FormControl = new FormControl(false, Validators.required);
+	      eventTypesFormGroup.addControl(evtype.value, control);
+	    }
+
+		//let password =new FormControl('',[Validators.required,ValidationService.passwordValidator]);
+		this.registerForm= new FormGroup({
+			//'password': password,
+			'displayName':new FormControl('',Validators.required),
+			'nit': new FormControl('',[Validators.required,CustomValidators.digits]),
+			'address':new FormControl('',Validators.required),
+			'phone':new FormControl('',[Validators.required,CustomValidators.digits]),
+			'email':new FormControl('',[Validators.required,CustomValidators.email]),
+			'mobile':new FormControl('',[Validators.required,CustomValidators.digits]),
+			'website':new FormControl('',[Validators.required,CustomValidators.url]),
+			'nameRep':new FormControl('',Validators.required),
+			'lastnameRep':new FormControl('',Validators.required),
+			'typeDocRep':new FormControl('',Validators.required),
+			'documentRep':new FormControl('',[Validators.required,CustomValidators.digits]),
+			'phoneRep':new FormControl('',[Validators.required,CustomValidators.digits]),
+			'mobileRep':new FormControl('',[Validators.required,CustomValidators.digits]),
+			'addressRep':new FormControl('',Validators.required),
+			'terms':new FormControl(false,ValidationService.termsAccepted),
+			'eventTypesFormGroup': eventTypesFormGroup
+		});
+	}
+
+
 
 	/**
 	 * Envia los datos de la forma
 	 **/
 	public onSubmit(){
-		console.log(this.producer);
+		for (let key in this.selEventTypes) {
+    		let value = this.selEventTypes[key];
+    		if(value){
+    			this.producer.eventTypes.push(key);
+    		}
+		}
+		console.log(this.producer.eventTypes);
 		this._producerService.registerProducer(this.producer).subscribe(
 	  		response => {
-	  			let user=response.user;
+	  			let producer=response.producer;
 	  			
-	  			if(!user){
+	  			if(!producer){
 	  				this.errorMessage="Debido a un error desconocido su registro no ha podido ser efectuado. Por favor intente registrarse luego.";
 	  				this.message=null;
 	  			}else{

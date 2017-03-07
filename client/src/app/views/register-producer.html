@@ -128,39 +128,38 @@
 
                             <h5>Tipos de eventos</h5>
 
-                            <div class="row">
+                            <div class="row" formGroupName="eventTypesFormGroup" [ngClass]="{'has-error':!registerForm.controls.eventTypesFormGroup.valid && registerForm.controls.eventTypesFormGroup.touched}">
                                 <div *ngFor="let et of eventTypes; let i=index">
                                     <div class="clearfix" *ngIf="i % 4 == 0"></div>
                                     <div class="col-md-3" >
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox" name="eventType" value="{{et.value}}"/> {{et.display }}
+                                                <input type="checkbox" formControlName="{{et.value}}" [(ngModel)]="selEventTypes[et.value]" (click)="cbclick()"/> {{et.display }}
                                             </label>
                                         </div>
                                     </div>
-                                </div>                                            
+                                </div>  
+                                <control-messages [formGroup]="registerForm.controls.eventTypesFormGroup" [message]="'Selecione al menos una categoria'"></control-messages>
                             </div>
                             
                             <div class="row">
-                                <div class="col-md-4 col-md-offset-4">
+                                <div class="col-md-4 col-md-offset-4">  
                                     <div class="centered" style="margin-top:20px;" [ngClass]="{'has-error':!registerForm.controls.terms.valid && registerForm.controls.terms.touched}">
                                         <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" formControlName="terms" value="Acepta">Acepto <strong>términos y condiciones</strong>
-                                            </label>
+                                          <label><input type="checkbox" formControlName="terms" value="Acepta">Acepto <strong>términos y condiciones</strong></label>
                                         </div>
                                         <control-messages [control]="registerForm.controls.terms"></control-messages>                     
-                                    </div>                                                                      
+                                    </div>                                                                  
                                     <div class="form-row field_submit">
-                                        <input type="submit" value="Enviar" id="contact_submit" class="ui button colored">
+                                        <input type="submit" value="Enviar" class="ui button colored" [disabled]="!registerForm.valid">
                                         <span class="loading hide"><img src="assets/img/preloader.gif"></span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row notice_bar">
-                                <p class="notice notice_ok hide">Gracias por Registrarte.</p>
-                                <p class="notice notice_error hide">Debido a un error desconocido tu registro no ha podido ser efectuado. Por favor intenta registrarte luego.</p>
-                            </div>                                                                                                                                               
+                             <div class="form-row notice_bar">
+                                <p class="notice notice_ok" *ngIf="message">{{message}}</p>
+                                <p class="notice notice_error" *ngIf="errorMessage">{{errorMessage}}</p>
+                            </div>                                                                                                                                         
                         </div><!--#END contain form-->
 
 

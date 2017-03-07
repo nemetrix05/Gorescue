@@ -61,10 +61,10 @@
                                             <control-messages [control]="registerFanForm.controls.name"></control-messages>
                                         </div>      
 
-                                        <div class="centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.surname.valid && registerFanForm.controls.surname.touched}">
+                                        <div class="centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.lastname.valid && registerFanForm.controls.lastname.touched}">
                                             <label for="txt_surname">Apellidos</label><br>
-                                            <input id="txt_surname" class="input_text required column" type="text"formControlName="surname" [(ngModel)]="user.surname">
-                                            <control-messages [control]="registerFanForm.controls.surname"></control-messages>
+                                            <input id="txt_surname" class="input_text required column" type="text" formControlName="lastname" [(ngModel)]="user.lastname">
+                                            <control-messages [control]="registerFanForm.controls.lastname"></control-messages>
                                         </div>                                                            
                                     </div>      
                                                                                   
@@ -90,7 +90,7 @@
                             <div class=" centered field_text" [ngClass]="{'has-error':!registerFanForm.controls.birthDate.valid && registerFanForm.controls.birthDate.touched}">
 
                                 <label for="txt_birthday">Fecha de nacimiento</label><br>
-                                <input type='text' class="input_text required column" id='datetimepickerfront' formControlName="birthDate" [(ngModel)]="user.birthDate" /> 
+                                <input type='date' class="input_text required column" id='datetimepickerfront' formControlName="birthDate" [(ngModel)]="user.birthDate" /> 
                                 <control-messages [control]="registerFanForm.controls.birthDate"></control-messages>                     
                             </div>        
 

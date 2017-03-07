@@ -44,33 +44,6 @@
 </head>
 <body>
 
-<div class="modal fade blue" id="modalinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>            
-            <h1>¡OH! Lo sentimos</h1>
-            <p>No puedes realizar esta acción si no has ingresado como usuario de GoTicket.</p>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-6">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button type="button" data-toggle="modal" data-target="#modalinfo" class="ui button" style="margin:0;">INGRESAR</button>
-                        </div>
-                        <div class="col-md-6">
-                            <button type="button" data-toggle="modal" data-target="#modalinfo" class="ui button" style="margin:0;">CANCELAR</button>
-                        </div>  
-                    </div>
-                </div>   
-            </div>  
-        </div><!--end modal-body-->    
-    </div><!--end modal-content-->     
-  </div>
-</div>
-
-
-
-
 	<a href=""><div class="chat-box">
 		<i class="large comments icon" style=""></i>
 		<p style="">Go-Chat</p>
@@ -153,9 +126,9 @@
                 <div class="menu-all-pages-container">
                     <ul class="nav-menu">
                         
-                        <li class="current-menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="index.html">Home</a></li>
                         <li class="menu-item"><a href="page_events.html">Eventos</a></li>
-                        <li class="menu-item"><a href="#">Promociones</a></li>
+                        <li class="current-menu-item"><a href="#">Promociones</a></li>
                         <li class="menu-item"><a href="#">Productores</a></li>
                         
                     </ul>
@@ -167,114 +140,17 @@
                 </ul>
             </nav>
 
-			<div id="content" class="site-content">
+			<div id="content" class="site-content single">
 
-				<div id="home-slider-1" class="royalSlider rsMinW">
-
-				  <div class="rsContent slide2">
-				    <a class="rsImg" href="../../assets/img/thumb/slider2.jpg">Slider2</a>
-				    <div class="bContainer">
-				    	<!-- <div class="rsABlock rs_text rs_text_meta" data-move-effect="top">Richie Unterberger</div> -->
-				    	<div class="rsABlock rs_text_box" data-move-effect="bottom">
-				    		<span>Estéreo Picnic 2017</span>
-				    	</div>
-				    	<div class="rsABlock" data-move-effect="bottom">
-				    		<a href="#" class="ui huge button colored">Más información del Evento</a>
-				    	</div>
-				    </div>
-				  </div>
-
-				  <div class="rsContent slide3 rsVideo">
-				    <a class="rsImg" href="../../assets/img/thumb/slider3.jpg" data-rsvideo="https://youtu.be/P-zb4C_k7Ek" data-rsw="1038" data-rsh="500">Slider 3</a>
-				    <div class="bContainer">
-				    	<div class="rsABlock rs_text rs_text_meta" data-move-effect="top"> </div>
-				    	<div class="rsABlock rs_text_box" data-move-effect="bottom">
-				    		<span>KORN EN CONCIERTO</span>
-				    	</div>
-				    </div>
-				  </div>
-
-				  <div class="rsContent slide4">
-				    <a class="rsImg" href="../../assets/img/thumb/slider4.jpg">Slider 3</a>
-				    <!-- <div class="bContainer">
-				    	<div class="rsABlock rs_text rs_text_meta" data-move-effect="top">Vertical Horizon</div>
-				    	<div class="rsABlock rs_text_box" data-move-effect="bottom">
-				    		<span>Red Hot Chili Peppers</span>
-				    	</div>
-				    	<div class="rsABlock" data-move-effect="bottom">
-				    		<a href="#" class="ui huge button colored">Explore the album</a>
-				    	</div>
-				    </div> -->
-				  </div>
-				  
-				</div> <!-- END royalSlider -->
-				<script id="addJS">
-				jQuery(document).ready(function($) {
-						jQuery.rsCSS3Easing.easeOutBack = 'cubic-bezier(0.175, 0.885, 0.320, 1.275)';
-							$('#home-slider-1').royalSlider({
-							arrowsNav: true,
-							arrowsNavAutoHide: true,
-							fadeinLoadedSlide: false,
-							controlNavigationSpacing: 0,
-							controlNavigation: 'bullets',
-							imageScaleMode: 'none',
-							imageAlignCenter:false,
-							blockLoop: true,
-							loop: true,
-							numImagesToPreload: 6,
-							transitionType: 'fade',
-							keyboardNavEnabled: true,
-							block: {
-								delay: 400
-							},
-                            autoPlay: {
-                                enabled: true,
-                                //pauseOnHover: true,
-                                delay: 4000
-                            }
-						});
-				});
-				</script>
 				<div class="page-inner">
 					<div class="container">
-						<div id="primary" class="content-area">
+						<div class="col-md-12">
 							
                             <div class="recent_news">
 
                                 <div class="page-header-form">
-                                    <h1 class="page-title" style="text-align: left; margin-top: 5%">LO QUE ESTÁS BUSCANDO</h1>
-                                </div>
-                                
-                                <div class="searchbox contact-generic">
-                                    
-                                    <form class="navbar-form" role="search">
-                                      <input type="text" placeholder="Busca un evento, artista, festival o ciudad">
-                                      <button type="submit" class="btn btn-default">
-                                          <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 
-                                      </button>
-                                    </form>
-
-                                </div><!-- searchbox -->
-
-                                <div class="page-header-form">
-                                    <h1 class="page-title" style="text-align: left; margin-top: 5%">PRÓXIMOS EVENTOS</h1>
-                                </div>                                
-                                
-                                <div class="filterbtn btn-group">
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
-                                      <span class="caret"></span>
-                                    </button>       
-                                      <ul class="dropdown-menu">
-                                        <li><input type="checkbox" aria-label="" name="" value="Conciertos">Conciertos</li>
-                                        <li><input type="checkbox" aria-label="" name="" value="Deportes">Deportes</li>
-                                        <li><input type="checkbox" aria-label="" name="" value="Teatro y Cultura">Teatro y Cultura</li>
-                                        <li><input type="checkbox" aria-label="" name="" value="Familiares">Familiares</li>
-                                        <li><input type="checkbox" aria-label="" name="" value="Festivales">Festivales</li>
-                                        <li><input type="checkbox" aria-label="" name="" value="Ferias y congresos">Ferias y congresos</li>
-                                        <li><input type="checkbox" aria-label="" name="" value="Foros">Foros</li>
-                                      </ul>                                                                     
-                                </div><!--end filterbtn-->
+                                    <h1 class="page-title" style="text-align: left; margin-top: 5%">PROMOCIONES DISPONIBLES</h1>
+                                </div>                           
 
                                 <div class="hr2"></div>
 
@@ -285,10 +161,18 @@
                                             <div class="row">
 
                                                 <!-- start event -->
-                                                <div class="col-md-6 separator">
+                                                <div class="col-md-4 separator">
+
+                                                    <p class="topinfo">Promoción válida hasta el 10 de Marzo</p>
 
                                                     <div class="picticket">
-                                                        <img src="../../assets/img/event-poster2.jpg">                                          
+                                                        <img src="../../assets/img/event-poster2.jpg"> 
+                                                        <div class="tagprom">
+                                                            <h2>
+                                                                PROMO
+                                                                <span>30%</span>    
+                                                            </h2>
+                                                        </div>                                         
                                                     </div>  
 
                                                     <div class="hr2"></div>
@@ -300,40 +184,44 @@
                                                         <div class="col-md-9 dateresume">
                                                             <h4>ESTÉREO PICNIC</h4>
                                                             <h5>Bogotá</h5>
-                                                            <div class="tagscloud">
-                                                                <span>Alternativo</span>
-                                                                <span>Festival</span>
-                                                                <span>Internacional</span>
-                                                                <span>Pop</span>
-                                                                <span>Hippie</span>
-                                                            </div><!--end tagscloud-->
                                                             <ul>
                                                                 <li><span class="glyphicon glyphicon-time"></span> Marzo 23 - 25, 2017 9:00 AM</li>
                                                                 <li><span class="glyphicon glyphicon-map-marker"></span> Parque Simón Bolivar</li>
+                                                                <li><span class="glyphicon glyphicon-sound-dolby"></span> Aplica a:</li>
                                                             </ul>
+                                                            <div class="tagscloud">
+                                                                <span>General</span>
+                                                                <span>Platino</span>
+                                                                <span>VIP</span>
+                                                                <span>Palco</span>
+                                                            </div><!--end tagscloud-->                                                            
                                                         </div>
 
                                                     </div>
 
                                                     <div class="hr2"></div>
 
-                                                    <div class="col-md-6">
-                                                        <button type="button" data-toggle="modal" data-target="#modalinfo" class="ui button" style="margin:0;">COMPRAR TICKETS</button>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="WHITELIST" id="contact_submit" class="ui button">
+                                                    <div class="col-md-6 col-md-offset-6">
+                                                        <input type="submit" value="COMPRAR" id="contact_submit" class="ui button btnexten">
                                                     </div>                                                        
                                                                               
                                                                                                     
                                                 </div>
-                                                <!-- end event -->
-
+                                                <!-- end event -->            
 
                                                 <!-- start event -->
-                                                <div class="col-md-6 separator">
+                                                <div class="col-md-4 separator">
+
+                                                    <p class="topinfo">Promoción válida hasta el 10 de Marzo</p>
 
                                                     <div class="picticket">
-                                                        <img src="../../assets/img/event-poster2.jpg">                                          
+                                                        <img src="../../assets/img/event-poster2.jpg"> 
+                                                        <div class="tagprom">
+                                                            <h2>
+                                                                PROMO
+                                                                <span>30%</span>    
+                                                            </h2>
+                                                        </div>                                         
                                                     </div>  
 
                                                     <div class="hr2"></div>
@@ -345,39 +233,44 @@
                                                         <div class="col-md-9 dateresume">
                                                             <h4>ESTÉREO PICNIC</h4>
                                                             <h5>Bogotá</h5>
-                                                            <div class="tagscloud">
-                                                                <span>Alternativo</span>
-                                                                <span>Festival</span>
-                                                                <span>Internacional</span>
-                                                                <span>Pop</span>
-                                                                <span>Hippie</span>
-                                                            </div><!--end tagscloud-->
                                                             <ul>
                                                                 <li><span class="glyphicon glyphicon-time"></span> Marzo 23 - 25, 2017 9:00 AM</li>
                                                                 <li><span class="glyphicon glyphicon-map-marker"></span> Parque Simón Bolivar</li>
+                                                                <li><span class="glyphicon glyphicon-sound-dolby"></span> Aplica a:</li>
                                                             </ul>
+                                                            <div class="tagscloud">
+                                                                <span>General</span>
+                                                                <span>Platino</span>
+                                                                <span>VIP</span>
+                                                                <span>Palco</span>
+                                                            </div><!--end tagscloud-->                                                            
                                                         </div>
 
                                                     </div>
 
                                                     <div class="hr2"></div>
 
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="COMPRAR TICKETS" id="contact_submit" class="ui button">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="WHITELIST" id="contact_submit" class="ui button">
+                                                    <div class="col-md-6 col-md-offset-6">
+                                                        <input type="submit" value="COMPRAR" id="contact_submit" class="ui button btnexten">
                                                     </div>                                                        
                                                                               
                                                                                                     
                                                 </div>
-                                                <!-- end event -->
+                                                <!-- end event -->      
 
                                                 <!-- start event -->
-                                                <div class="col-md-6 separator">
+                                                <div class="col-md-4 separator">
+
+                                                    <p class="topinfo">Promoción válida hasta el 10 de Marzo</p>
 
                                                     <div class="picticket">
-                                                        <img src="../../assets/img/event-poster2.jpg">                                          
+                                                        <img src="../../assets/img/event-poster2.jpg"> 
+                                                        <div class="tagprom">
+                                                            <h2>
+                                                                PROMO
+                                                                <span>30%</span>    
+                                                            </h2>
+                                                        </div>                                         
                                                     </div>  
 
                                                     <div class="hr2"></div>
@@ -389,40 +282,44 @@
                                                         <div class="col-md-9 dateresume">
                                                             <h4>ESTÉREO PICNIC</h4>
                                                             <h5>Bogotá</h5>
-                                                            <div class="tagscloud">
-                                                                <span>Alternativo</span>
-                                                                <span>Festival</span>
-                                                                <span>Internacional</span>
-                                                                <span>Pop</span>
-                                                                <span>Hippie</span>
-                                                            </div><!--end tagscloud-->
                                                             <ul>
                                                                 <li><span class="glyphicon glyphicon-time"></span> Marzo 23 - 25, 2017 9:00 AM</li>
                                                                 <li><span class="glyphicon glyphicon-map-marker"></span> Parque Simón Bolivar</li>
+                                                                <li><span class="glyphicon glyphicon-sound-dolby"></span> Aplica a:</li>
                                                             </ul>
+                                                            <div class="tagscloud">
+                                                                <span>General</span>
+                                                                <span>Platino</span>
+                                                                <span>VIP</span>
+                                                                <span>Palco</span>
+                                                            </div><!--end tagscloud-->                                                            
                                                         </div>
 
                                                     </div>
 
                                                     <div class="hr2"></div>
 
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="COMPRAR TICKETS" id="contact_submit" class="ui button">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="WHITELIST" id="contact_submit" class="ui button">
+                                                    <div class="col-md-6 col-md-offset-6">
+                                                        <input type="submit" value="COMPRAR" id="contact_submit" class="ui button btnexten">
                                                     </div>                                                        
                                                                               
                                                                                                     
                                                 </div>
-                                                <!-- end event -->
-
+                                                <!-- end event -->      
 
                                                 <!-- start event -->
-                                                <div class="col-md-6 separator">
+                                                <div class="col-md-4 separator">
+
+                                                    <p class="topinfo">Promoción válida hasta el 10 de Marzo</p>
 
                                                     <div class="picticket">
-                                                        <img src="../../assets/img/event-poster2.jpg">                                          
+                                                        <img src="../../assets/img/event-poster2.jpg"> 
+                                                        <div class="tagprom">
+                                                            <h2>
+                                                                PROMO
+                                                                <span>30%</span>    
+                                                            </h2>
+                                                        </div>                                         
                                                     </div>  
 
                                                     <div class="hr2"></div>
@@ -434,39 +331,44 @@
                                                         <div class="col-md-9 dateresume">
                                                             <h4>ESTÉREO PICNIC</h4>
                                                             <h5>Bogotá</h5>
-                                                            <div class="tagscloud">
-                                                                <span>Alternativo</span>
-                                                                <span>Festival</span>
-                                                                <span>Internacional</span>
-                                                                <span>Pop</span>
-                                                                <span>Hippie</span>
-                                                            </div><!--end tagscloud-->
                                                             <ul>
                                                                 <li><span class="glyphicon glyphicon-time"></span> Marzo 23 - 25, 2017 9:00 AM</li>
                                                                 <li><span class="glyphicon glyphicon-map-marker"></span> Parque Simón Bolivar</li>
+                                                                <li><span class="glyphicon glyphicon-sound-dolby"></span> Aplica a:</li>
                                                             </ul>
+                                                            <div class="tagscloud">
+                                                                <span>General</span>
+                                                                <span>Platino</span>
+                                                                <span>VIP</span>
+                                                                <span>Palco</span>
+                                                            </div><!--end tagscloud-->                                                            
                                                         </div>
 
                                                     </div>
 
                                                     <div class="hr2"></div>
 
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="COMPRAR TICKETS" id="contact_submit" class="ui button">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="WHITELIST" id="contact_submit" class="ui button">
+                                                    <div class="col-md-6 col-md-offset-6">
+                                                        <input type="submit" value="COMPRAR" id="contact_submit" class="ui button btnexten">
                                                     </div>                                                        
                                                                               
                                                                                                     
                                                 </div>
-                                                <!-- end event -->
+                                                <!-- end event -->      
 
                                                 <!-- start event -->
-                                                <div class="col-md-6 separator">
+                                                <div class="col-md-4 separator">
+
+                                                    <p class="topinfo">Promoción válida hasta el 10 de Marzo</p>
 
                                                     <div class="picticket">
-                                                        <img src="../../assets/img/event-poster2.jpg">                                          
+                                                        <img src="../../assets/img/event-poster2.jpg"> 
+                                                        <div class="tagprom">
+                                                            <h2>
+                                                                PROMO
+                                                                <span>30%</span>    
+                                                            </h2>
+                                                        </div>                                         
                                                     </div>  
 
                                                     <div class="hr2"></div>
@@ -478,39 +380,44 @@
                                                         <div class="col-md-9 dateresume">
                                                             <h4>ESTÉREO PICNIC</h4>
                                                             <h5>Bogotá</h5>
-                                                            <div class="tagscloud">
-                                                                <span>Alternativo</span>
-                                                                <span>Festival</span>
-                                                                <span>Internacional</span>
-                                                                <span>Pop</span>
-                                                                <span>Hippie</span>
-                                                            </div><!--end tagscloud-->
                                                             <ul>
                                                                 <li><span class="glyphicon glyphicon-time"></span> Marzo 23 - 25, 2017 9:00 AM</li>
                                                                 <li><span class="glyphicon glyphicon-map-marker"></span> Parque Simón Bolivar</li>
+                                                                <li><span class="glyphicon glyphicon-sound-dolby"></span> Aplica a:</li>
                                                             </ul>
+                                                            <div class="tagscloud">
+                                                                <span>General</span>
+                                                                <span>Platino</span>
+                                                                <span>VIP</span>
+                                                                <span>Palco</span>
+                                                            </div><!--end tagscloud-->                                                            
                                                         </div>
 
                                                     </div>
 
                                                     <div class="hr2"></div>
 
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="COMPRAR TICKETS" id="contact_submit" class="ui button">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="WHITELIST" id="contact_submit" class="ui button">
+                                                    <div class="col-md-6 col-md-offset-6">
+                                                        <input type="submit" value="COMPRAR" id="contact_submit" class="ui button btnexten">
                                                     </div>                                                        
                                                                               
                                                                                                     
                                                 </div>
-                                                <!-- end event -->
+                                                <!-- end event -->      
 
                                                 <!-- start event -->
-                                                <div class="col-md-6 separator">
+                                                <div class="col-md-4 separator">
+
+                                                    <p class="topinfo">Promoción válida hasta el 10 de Marzo</p>
 
                                                     <div class="picticket">
-                                                        <img src="../../assets/img/event-poster2.jpg">                                          
+                                                        <img src="../../assets/img/event-poster2.jpg"> 
+                                                        <div class="tagprom">
+                                                            <h2>
+                                                                PROMO
+                                                                <span>30%</span>    
+                                                            </h2>
+                                                        </div>                                         
                                                     </div>  
 
                                                     <div class="hr2"></div>
@@ -522,33 +429,30 @@
                                                         <div class="col-md-9 dateresume">
                                                             <h4>ESTÉREO PICNIC</h4>
                                                             <h5>Bogotá</h5>
-                                                            <div class="tagscloud">
-                                                                <span>Alternativo</span>
-                                                                <span>Festival</span>
-                                                                <span>Internacional</span>
-                                                                <span>Pop</span>
-                                                                <span>Hippie</span>
-                                                            </div><!--end tagscloud-->
                                                             <ul>
                                                                 <li><span class="glyphicon glyphicon-time"></span> Marzo 23 - 25, 2017 9:00 AM</li>
                                                                 <li><span class="glyphicon glyphicon-map-marker"></span> Parque Simón Bolivar</li>
+                                                                <li><span class="glyphicon glyphicon-sound-dolby"></span> Aplica a:</li>
                                                             </ul>
+                                                            <div class="tagscloud">
+                                                                <span>General</span>
+                                                                <span>Platino</span>
+                                                                <span>VIP</span>
+                                                                <span>Palco</span>
+                                                            </div><!--end tagscloud-->                                                            
                                                         </div>
 
                                                     </div>
 
                                                     <div class="hr2"></div>
 
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="COMPRAR TICKETS" id="contact_submit" class="ui button">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <input type="submit" value="WHITELIST" id="contact_submit" class="ui button">
+                                                    <div class="col-md-6 col-md-offset-6">
+                                                        <input type="submit" value="COMPRAR" id="contact_submit" class="ui button btnexten">
                                                     </div>                                                        
                                                                               
                                                                                                     
                                                 </div>
-                                                <!-- end event -->
+                                                <!-- end event -->                                                                                                                                                                                                                                                             
 
                                             </div>                                                                                        
                                              <div class="row">
@@ -582,43 +486,7 @@
                                 
                             </div>
 
-						</div> <!-- END #primary -->
-
-
-						<div id="secondary" class="widget-area" role="complementary">
-
-									<div id="albums_carousel" class="box_content_wrapper">
-                                        <h4 class="widget_heading">Nuestros Patrocinadores</h4>
-                                        <div class="box_content">
-                                            <ul class="navarrows">
-                                                <li><span class="customPrevBtn"><i class="angle left icon"></i></span></li>
-                                                <li><span class="customPrevBtn"><i class="angle right icon"></i></span></li>
-                                            </ul><!--end navarrows-->                                            
-                                            <div class="home_album_carousel owl-carousel">
-                                                
-                                                <div class="ac_item dark_shadow">
-                                                    <img src="../../assets/img/thumb/aside/sponsor1.png" alt="">
-                                                </div>
-
-                                                <div class="ac_item dark_shadow">
-                                                    <img src="../../assets/img/thumb/aside/sponsor2.png" alt="">
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-							<aside class="widget event_widget" style="margin-top: 20px">
-                                <div class="widget-content">
-                                    <div class="sponsors">
-                                        <div class="add">
-                                            <h3>ASIDE<br> PARA<br> SPONSORS</h3>
-                                        </div>                                        
-                                    </div>
-                                </div>
-                            </aside>
-
-						</div> <!-- END secondary -->                                
+						</div> <!-- END #primary -->                          
 
 					</div><!--/.container -->
                     
@@ -728,27 +596,6 @@
         $('.dropdown-toggle').dropdown();
         // Modal atributes 
         $('#modalinfo').modal('hide');
-        // carrusel patrocinadores
-        $(".home_album_carousel").owlCarousel({
-            items : 1,
-            itemsDesktop: [1199,2],
-            itemsDesktopSmall: [979,1],
-            itemsTablet: [768,2],
-            lazyLoad : true,
-            autoplay: true,
-            loop: true
-        });        
-        // Nav event
-        var owl = $('.owl-carousel');
-        owl.owlCarousel();
-
-        // Nav next and prev
-        $('.customNextBtn').click(function() {
-            owl.trigger('next.owl.carousel');
-        });
-        $('.customPrevBtn').click(function() {
-            owl.trigger('prev.owl.carousel');
-        });           
     </script>
 
 </body>

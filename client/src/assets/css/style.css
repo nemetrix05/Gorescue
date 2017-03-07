@@ -2079,6 +2079,11 @@ img.wp-smiley {
     background: #7E7E7E;
 }
 
+.ui.button.colored:disabled {
+    background: #5E5E5E;
+    cursor: not-allowed;
+}
+
 .ui.huge.button {
     font-size: 15px;
     font-weight: bold;

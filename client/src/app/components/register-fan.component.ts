@@ -73,10 +73,10 @@ export class RegisterFanComponent implements OnInit {
 			'password': password,
 			'password2': new FormControl('',[Validators.required,ValidationService.matchPasswordValidator(password)]),
 			'name':new FormControl('',Validators.required),
-			'surname':new FormControl('',Validators.required),
+			'lastname':new FormControl('',Validators.required),
 			'typeDoc':new FormControl('',Validators.required),
 			'document':new FormControl('',[Validators.required,CustomValidators.digits]),
-			'birthDate':new FormControl('',[Validators.required,ValidationService.date]),
+			'birthDate':new FormControl('',[Validators.required,CustomValidators.date]),
 			'phone':new FormControl('',[Validators.required,CustomValidators.digits]),
 			'mobile':new FormControl('',[Validators.required,CustomValidators.digits]),
 			'country':new FormControl('',Validators.required),
@@ -115,6 +115,8 @@ export class RegisterFanComponent implements OnInit {
 	 **/
 	public onSubmit(){
 		console.log(this.user);
+		//let birthDate=new Date(this.user.birthDate+'');
+		//this.user.birthDate = birthDate.toISOString();
 		this._userService.registerUser(this.user).subscribe(
 	  		response => {
 	  			let user=response.user;

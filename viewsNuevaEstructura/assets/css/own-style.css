@@ -87,7 +87,7 @@ filter: grayscale(0);
 .droptownuser li:nth-child(6) a,.droptownuser li:nth-child(6) a:hover{background-position: 5px -201px;}
 .droptownuser .dropdown-menu li:last-child{margin:10px 0 0 0; }
 .iptransparent{background: rgba(204, 204, 204, 0.2) !important;}
-.iptransparent2{background: url(../img/pulldown.svg) 98% 15px no-repeat rgba(204, 204, 204, 0.2) !important;}
+.iptransparent2{background: url(../img/pulldown.svg) 98% 15px no-repeat rgba(204, 204, 204, 0.2) !important;padding: 9.5px 12px !important;}
 
 /*ESTILOS ANDRES CRUZ - 18/02/2017*/
 .centeredv2 label{display: block;text-align: center;margin: 20px 0;}
@@ -169,6 +169,23 @@ ul.resumelist{border-top: 1px solid #AAA;margin: 0 0 0 20px;}
 .fade.blue p{margin: 40px 0;
     text-align: center;
     font-size: 15px;}
-.fade.blue button{max-width: 100%;width: 100%;}
+.fade.blue button,.btnexten{max-width: 100%;width: 100%;}
 .fade.blue .close{color: #fff; text-align: right; opacity: 1; font-size: 30px;}
 a:focus, a:hover{text-decoration: none !important;}
+
+/*ESTILOS ANDRES CRUZ - 06/03/2017*/
+.tagprom{background: url(../img/bottom-prom.png) no-repeat bottom center; position: absolute; top: 0; right: 25px; padding: 0 0 16px 0; background-size: contain; }
+.tagprom h2{color: #fff; background: #E21833; margin: 0; text-align: center; font-size: 15px; padding: 9px 4px;}
+.tagprom span{display: block; font-size: 26px;}
+
+/*ESTILOS ANDRES CRUZ - 07/03/2017*/
+.filtercity button{background: #969696; border-radius: 0; color: #fff; border: none; transition: all 0.2s; padding: 7px 12px; }
+.filtercity button:hover, .filtercity button[aria-expanded="true"] {background-color: #FF0000 !important; color: #fff !important; }
+.filtercity .glyphicon{padding: 0 6px 0px 0;}
+.filtercity input{border-radius: 0;}
+.filtercity .dropdown-menu{color: #919191; min-width: 200px; width: 100%; border-radius: 0; margin: 0; }
+.jevent{background: #212121;overflow: hidden;box-shadow: 0px 0px 17px #000;margin: 0 0 30px 0;}
+.navarrows{overflow: hidden;text-align: right;margin: 0;}
+.navarrows li{display: inline-block;*display: inline;*zoom:1;vertical-align: top;cursor: pointer;}
+.navarrows i.icon::before{color: #fff;font-size: 2em;font-weight: bold;}
+.navarrows i.icon:hover::before{color: #FF0000;}
