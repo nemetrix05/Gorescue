@@ -145,7 +145,7 @@
                             <div class="col-md-10 col-md-offset-1 ballmenu">
                                     
                                 <div class="progress">
-                                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                                   </div>
                                 </div>
 
@@ -158,7 +158,7 @@
                                     <a href="#" class="active"><span>2</span>DATOS DE COMPRA</a>
                                   </div>
                                   <div class="btn-group" role="group">
-                                    <a href="#"><span>3</span>PAGO</a>
+                                    <a href="#" class="active"><span>3</span>PAGO</a>
                                   </div>
 
                                 </div>    
@@ -191,55 +191,167 @@
 
                                         <div class="col-md-10 col-md-offset-1">                                                                            
 
-                                            <h5>RESUMEN DE COMPRA</h5>
+                                            <h5>MEDIO DE PAGO</h5>
 
                                             <div class="row">
-                                                <div class="col-md-6"> 
-                                                    <div class="resumeli">
-                                                        <ul>
-                                                            <li><span>Nombre:</span> SANTIAGO SALAMANCA</li>
-                                                            <li><span>ID:</span> 1.123.123.412</li>
-                                                            <li><span>Celular:</span> 310 003 1234</li>
-                                                            <li><span>País:</span> COLOMBIA</li>
-                                                            <li><span>Ciudad:</span> BOGOTÁ</li>
-                                                            <li><span>Email:</span> STGOSALAMANCA@GMAIL.COM</li>
-                                                        </ul>
-                                                        <button class="ui button">ENVIAR COMO REGALO</button>
-                                                    </div><!--end resumeli-->
+                                                <div class="col-md-8"> 
+
+                                                    <div class="credidcart">
+                                                        <h4>TARJETA DE CRÉDITO</h4>
+                                                        <ol>
+                                                            <li><a href="#"><img src="../../../assets/img/mastercard.jpg"></a></li>
+                                                            <li><a href="#" class="active"><img src="../../../assets/img/american.jpg"></a></li>
+                                                            <li><a href="#"><img src="../../../assets/img/dinners-club.jpg"></a></li>
+                                                            <li><a href="#"><img src="../../../assets/img/visa.jpg"></a></li>
+                                                        </ol>
+                                                        <h4>OTROS MÉTODOS DE PAGO</h4>
+                                                        <ol>
+                                                            <li><a href="#"><img src="../../../assets/img/efecty.jpg"></a></li>
+                                                            <li><a href="#"><img src="../../../assets/img/baloto.jpg"></a></li>
+                                                            <li><a href="#"><img src="../../../assets/img/pse.jpg"></a></li>
+                                                        </ol>
+                                                                                                                   
+                                                    </div><!--end credidcart-->
+
+                                                    
+                                                    <div class="formshadow">
+
+                                                        <div class="row">
+                                                            <div class="col-md-12" style="padding:0;"> 
+                                                                <h5>¿NO TIENES EL DINERO SUFICIENTEPARA COMPRAR TUS TICKETS?</h5>         
+                                                            </div>
+
+                                                        </div>                                                               
+                                                    <form name="contact_form" method="post" action="#" class="row contact-generic">
+
+                                                        <div class="col-md-12">                                     
+                                                                                  
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="centered field_text">
+                                                                        <label for="txt_givename">TITULAR DE LA TARJETA</label><br>
+                                                                        <input id="txt_givename" class="input_text required column" type="text" value="" name ="txt_givename" placeholder="NOMBRES Y APELLIDOS">
+                                                                    </div>                                                        
+                                                                </div>
+                                                                <div class="col-md-6">                                               
+
+                                                                    <div class="centered field_text">
+                                                                        <label for="txt_typedoc">Tipo de documento</label><br>
+                                                                        <select id="txt_typedoc" class="input_text required column" value="" name ="txt_typedoc">
+                                                                            <option value="0">--Seleccionar---</option>
+                                                                            <option value="CC">C.C</option>
+                                                                            <option value="CE">C.E</option>
+                                                                            <option value="Pasaporte">PASAPORTE</option>
+                                                                            <option value="NIT">NIT</option>
+                                                                        </select>
+                                                                    </div>        
+
+                                                                    <div class="centered field_text">
+                                                                        <label for="txt_doc"><br /></label>
+                                                                        <input id="txt_doc" class="input_text required column" type="text" value="" name ="txt_doc" placeholder="XXXXXXXX">
+                                                                    </div>                                               
+
+                                                                    <div class="centered field_text">
+                                                                        <label for="txt_phone">NÚMERO DE LA TARJETA</label><br>
+                                                                        <input id="txt_phone" class="input_text required column" type="text" value="" name ="txt_phone" placeholder="XXXX - XXXX - XXXX - XXXX">
+                                                                    </div>     
+
+                                                                    <div class="centered field_text">
+                                                                        <label for="txt_phone">CÓDIGO DE SEGURIDAD</label><br>
+                                                                        <input id="txt_phone" class="input_text required column" type="text" value="" name ="txt_phone" placeholder="XXXX">
+                                                                        <p>*3 Últimos digitos de la tarjeta</p>
+                                                                    </div>                                                                    
+                                                                </div>
+
+                                                                <div class="col-md-6">                                                                                                    
+                                                                    <div class="centered field_text">
+                                                                        <label for="txt_mobile">FECHA DE VENCIMIENTO</label><br>
+                                                                        <input id="txt_mobile" class="input_text required column" type="text" value="" name ="txt_mobile" placeholder="MM">
+                                                                    </div>                                                       
+
+                                                                    <div class="centered field_text">
+                                                                        <label for="txt_mobile"><br /></label><br>
+                                                                        <input id="txt_mobile" class="input_text required column" type="text" value="" name ="txt_mobile" placeholder="AAAA">
+                                                                    </div>  
+
+
+                                                                    <label for="txt_region">¿PAGAR A CUOTAS?</label><br>
+                                                                    <select id="txt_region" class="input_text required column" value="" name ="txt_region">
+                                                                        <option value="NO">NO</option>
+                                                                        <option value="SI">SI</option>
+                                                                    </select>   
+                                                                                                                                                                                
+
+                                                                    <div class="centered field_text">
+                                                                        <label for="txt_addres">¿CUÁNTAS CUOTAS?</label><br>
+                                                                        <input id="txt_addres" class="input_text required column" type="number" value="12" name ="txt_addres">
+                                                                    </div>
+
+                                                                </div>    
+                                                                
+                                                                <div style="clear:both;"></div>
+
+                                                                <div class="hr"></div>
+
+                                                                <div class="col-md-12">
+                                                                    <h6><span>Total a Pagar: $000.000</span> *IVA incluido</h6>                                                                        
+                                                                </div>
+
+                                                                <div class="hr2"></div> 
+
+                                                                <div class="row callright">
+
+                                                                    <div class="col-md-8 col-md-offset-3">  
+
+                                                                        <div class="row">
+                                                                            <div class="col-md-4">
+                                                                                <button type="button" id="contact_submit" class="ui button">VOLVER</button>
+                                                                            </div>
+                                                                            <div class="col-md-8">
+                                                                                <button type="button" id="contact_submit" class="ui button">CONFIRMAR PAGO</button>
+                                                                            </div>                                                        
+                                                                        </div>                           
+                                                                    
+                                                                    </div>
+
+                                                                </div>   
+
+                                                                <div class="hr"></div> 
+
+
+                                                            </div>     
+                                                                                               
+                                                                                                                                                          
+                                                        </div><!--#END contain form-->
+
+
+                                                        
+
+                                                    </form> <!-- END #contact_form -->                                                        
+                                                    </div><!--end formshadow-->
+                                                    
                                                 </div>
-                                                <div class="col-md-6"> 
+
+                                                <div class="col-md-4"> 
                                                     <div class="resumelo">
-                                                        <h6>Oriental Norte Baja</h6>
+                                                        <h6>RESUMEN DE COMPRA</h6>
+                                                        <p>Oriental Norte Baja</p>
                                                         <ul>
                                                             <li>Cantidad de Tickets: 2</li>
                                                             <li>Costo por servicio: $000.000</li>
                                                             <li>Subtotal: $000.000</li>
                                                         </ul>
-                                                        <p><span>Total: $000.000</span> *IVA incluido</p>
+                                                        <p><span>Total: $000.000</span> *IVA incluido</p><br />
+                                                        <h6>DATOS DE FACTURACIÓN</h6>
+                                                        <p>Nombre: Santiago salamanca Rojas</p>
+                                                        <p>ID: 1.000.543.321</p>
+
                                                     </div>
                                                 </div>                                                
                                             </div>
 
                                             <div class="hr"></div>    
 
-                                            <div class="hr"></div> 
-                                            
-                                            <div class="row">
-
-                                                <div class="col-md-6 col-md-offset-6">  
-
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <input type="submit" value="VOLVER" id="contact_submit" class="ui button">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <input type="submit" value="CONTINUAR" id="contact_submit" class="ui button">
-                                                        </div>                                                        
-                                                    </div>                           
-                                                
-                                                </div>
-
-                                            </div>                                                                                                                                  
                                         </div><!--#END contain form-->
 
 

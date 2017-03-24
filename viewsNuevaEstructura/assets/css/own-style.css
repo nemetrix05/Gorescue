@@ -139,7 +139,6 @@ ul.resumelist{border-top: 1px solid #AAA;margin: 0 0 0 20px;}
 .filterbtn .dropdown-menu{padding: 0 5px; color: #919191; min-width: 200px; width: 100%; border-radius:0; padding: 0;margin: 0; }
 .filterbtn input[type="checkbox"]{-webkit-appearance: none; -moz-appearance: none; appearance: none; border: 2px solid #919191; background: #fff; padding: 7px; margin: 0 12px; border-radius: 3px; cursor: pointer;} 
 .filterbtn input[type="checkbox"]:checked{border: 2px solid #919191;background: url(../img/checkout.svg) no-repeat center center #fff;}
-.fade.blue{top: 30%;}
 .fade.blue .modal-content{background: #09152A;}
 .fade.blue h1{color: #fff; text-align: center;text-transform: capitalize;}
 .fade.blue p{margin: 40px 0;
@@ -147,6 +146,20 @@ ul.resumelist{border-top: 1px solid #AAA;margin: 0 0 0 20px;}
     font-size: 15px;}
 .fade.blue button,.btnexten{max-width: 100%;width: 100%;}
 .fade.blue .close{color: #fff; text-align: right; opacity: 1; font-size: 30px;}
+/*whitout marge*/
+.fade.smarge .modal-content{background: #09152A;}
+.fade.smarge .modal-admin{width: 100%;max-width: 750px;}
+@media screen and (max-width: 768px) {
+  .modal-admin {width: 100%; max-width: 600px; margin: auto; } 
+  .fade.smarge{margin: 0;padding-left: 10px !important;padding-right: 10px !important;padding-top: 10px;}
+}
+.fade.smarge h1{color: #fff; text-align: center;text-transform: capitalize;}
+.fade.smarge p{margin: 20px 0;
+    text-align: left;
+    font-size: 15px;}
+.fade.smarge button,.btnexten{max-width: 100%;width: 100%;}
+.fade.smarge .close{color: #fff; text-align: right; opacity: 1; font-size: 30px;}
+.carpet{text-align: center;padding: 10px 0;}
 a:focus, a:hover{text-decoration: none !important;}
 
 /*ESTILOS ANDRES CRUZ - 06/03/2017*/
@@ -211,6 +224,49 @@ padding: 8px 0;
 border-top: 1px solid #909090;
 border-bottom: 1px solid #909090;}
 .resumelo ul li{margin: 3px 0;}
-.resumelo p{margin: 10px 0;}
+.resumelo p{margin: 7px 0;}
 .resumelo p span{color: #fff; font-weight: bold;}
+.credidcart{border-right: 1px solid #fff;padding: 0 40px 0 0;}
 
+/*ESTILOS ANDRES CRUZ - 22/03/2017*/
+.credidcart h4{font-weight: bold; color: #fff; border-bottom: 1px solid #909090; font-size: 15px; padding: 0 0 10px 0; margin: 0 0 20px 0;}
+.credidcart ol{padding: 0;margin: 0;list-style: none;}
+.credidcart li{display: inline-block;vertical-align: top; margin: 0 20px 50px 0;}
+.credidcart li a{display: block;}
+.credidcart li a img{border-radius: 3px;border: 3px solid #fff;}
+.credidcart li a:hover img,.credidcart li a.active img{border: 3px solid red;}
+.formshadow{padding: 0 40px 0 0;}
+.formshadow h5{background: #212121; color: #fff; padding: 25px 0; font-size: 15px; box-shadow: 2px 2px 6px #000;}
+.formshadow form{background: #212121;box-shadow: 2px 2px 6px #000;}
+.formshadow label{font-size: 14px;font-weight: normal;}
+.formshadow h6{text-transform: inherit;}
+.formshadow h6 span{color: #fff;font-weight: bold;}
+.formshadow input[type="text"],.formshadow input[type="number"],.formshadow select{border: 2px solid #8e8e8e;}
+.formshadow button{max-width: 100%;width: 100%; font-size: 17px !important;font-weight: 700 !important;}
+.alertck{background: #D2D3D7;box-shadow: 2px 2px 6px #000;position: relative;z-index: 1; margin: 0 0 40px 0;}
+.alertck ul{margin: 0;padding: 20px 25px; list-style: none;}
+.alertck h5{background: #212121; color: #fff; padding: 25px 0; font-size: 15px; margin: 30px 0 0 0; box-shadow: none; } 
+.alertck ul li{color: #212121;text-align: justify;}
+.alertck h6{padding: 5px 30px; text-align: right;color: #212121; font-weight: 600;margin: 0;}
+.alertck p{padding: 20px 30px;color: #212121;}
+.alertck input{margin: 0;}
+.amountbox input{text-align: center;}
+.amountbox .input-group-addon{background: #D2D3D7;color: #000;font-weight: bold;border-radius: 0;}
+
+/*ESTILOS ANDRES CRUZ - 23/03/2017*/
+.borderg{border-right: 1px solid #fff;padding: 0 30px 0 0;}
+.tdcard{border:1px solid #909090;padding: 0 0 15px 0; border-radius: 6px;margin: 0 0 30px 0;}
+.tdcard ul{list-style: none;margin: 0;padding: 0;}
+.tdcard ul li{text-align: left;}
+.tdcard ul span{color: #fff; font-weight: 700; text-align: right; padding: 0 18px 0 0; display: inline-block; max-width: 125px; width: 100%;}
+.tdcard h3{border: none;text-align: center;color: #000;background: #D2D3D7; border-radius: 6px 6px 0 0;padding: 10px 0;
+font-weight: 600;font-size: 16px; overflow: hidden; margin: 0 0 15px 0;}
+.tdcard h3 span{float: right;margin: 0 10px 0 0;font-size: 19px;}
+
+.tdalert ul{list-style: none;margin: 0 auto;padding: 0;max-width: 400px;width: 100%;text-align: center;}
+.tdalert ul li{text-align: left;}
+.tdalert ul span{color: #fff; font-weight: 700; text-align: right; padding: 0 18px 0 0; display: inline-block; max-width: 159px; width: 100%;}
+.callbutton1{text-align: center;}
+.callbutton1 button{font-size: 17px !important;font-weight: 700 !important;display: inline-block;}
+.tdalert p{text-align: center; margin: 50px 0 0 0;}
+.tdalert p span,.tdalert p a{font-weight: bold;color: #fff;}
