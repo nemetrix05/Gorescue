@@ -1,63 +1,25 @@
-.chat-box {
-	width: 155px; 
-	height: 30px; 
-	background-color: #10192c; 
-	position: fixed; 
-	bottom: 0; 
-	right: 0; 
-	z-index: 1000; 
-	border-radius: 5px 0 0 0;
-	transition: 1s;
-}
-
-.chat-box > p {
-	text-align: justify; 
-	padding-right: 30%; 
-	float: right; 
-	line-height: 30px; 
-	color: white;
-}
-
-.chat-box > i {
-	color:red; 
-	padding-left: 10%;
-	border-color: black;
-	border: 1px;
-}
-
-.chat-box:hover {
-	background-color: red;
-}
+.chat-box {width: 155px; height: 30px; background-color: #10192c; position: fixed; bottom: 0; right: 0; z-index: 1000; border-radius: 5px 0 0 0; transition: 1s; }
+.chat-box > p {text-align: justify; padding-right: 30%; float: right; line-height: 30px; color: white; }
+.chat-box > i {color:red; padding-left: 10%; border-color: black; border: 1px; }
+.chat-box:hover {background-color: red; }
 /*ESTILOS ANDRES CRUZ - 06/02/2017*/
 
 .page-header-bs h1{margin:40px 0 55px 0; color: #FFF; font-size: 30px; font-family: "Oswald", Helvetica, Arial, sans-serif; font-weight: normal; clear: both; text-transform: uppercase; text-align: center;}
 
 .setbox{display: block;position: relative;}
-.setbox img{
-filter: grayscale(100%);
--webkit-filter: grayscale(100%);
-transition:filter 0.6s;
--webkit-transition:-webkit-filter 1s;	
-}
-.setbox img:hover{
-filter: grayscale(0);
--webkit-filter: grayscale(0);	
-}
-.setbox h2{position: absolute;bottom: 0;left: 0;max-width: 100%;width: 100%;text-align: center;color: #fff;z-index: 1;background: url(../img/stay1.png) no-repeat left top;margin: 0;padding: 25px 0 13px 0;    -webkit-transition: background 0.6s;
-   -moz-transition: background 0.6s;
-   -o-transition: background 0.6s;
-   -ms-transition: background 0.6s;
-   transition: background 0.6s;}
+.setbox img{filter: grayscale(100%); -webkit-filter: grayscale(100%); transition:filter 0.6s; -webkit-transition:-webkit-filter 1s; }
+.setbox img:hover{filter: grayscale(0); -webkit-filter: grayscale(0); }
+.setbox h2{position: absolute;bottom: 0;left: 0;max-width: 100%;width: 100%;text-align: center;color: #fff;z-index: 1;background: url(../img/stay1.png) no-repeat left top;margin: 0;padding: 25px 0 13px 0;    -webkit-transition: background 0.6s; -moz-transition: background 0.6s; -o-transition: background 0.6s; -ms-transition: background 0.6s; transition: background 0.6s;}
 .setbox:hover > h2{background: url(../img/stay2.png) no-repeat left top;}
 
 /*ESTILOS ANDRES CRUZ - 07/02/2017*/
 
-.contact-generic h5{background: #d8d9dd; text-align: center; color: #000; font-size: 12px; font-weight: 600; padding: 3px 0; margin: 30px 0; }
+.contact-generic h5{background: #d8d9dd; text-align: center; color: #000; font-size: 12px; font-weight: 600; padding: 8px 0; margin: 30px 0; }
 .contact-generic label{margin: 25px 0 0 0;}
-.contact-generic select{padding: 8px 12px; border: 1px solid #8e8e8e; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; background: url(../img/pulldown.svg) 98% 15px no-repeat;-webkit-appearance: none;-moz-appearance:none;appearance:none; cursor: pointer;background-size: 14px !important;}
-.contact-generic input,.contact-generic select{max-width: 100%;width: 100%;box-sizing:border-box;}
+.contact-generic select{padding: 9px 12px; border: 1px solid #8e8e8e; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; background: url(../img/pulldown.svg) 98% 15px no-repeat;-webkit-appearance: none;-moz-appearance:none;appearance:none; cursor: pointer;background-size: 14px !important;}
+.contact-generic input,.contact-generic select{max-width: 100% !important;width: 100%;box-sizing:border-box;}
 .contact-generic input[type="checkbox"]{display: inline-block;width: auto;}
-.contact-generic input[type="submit"]{margin: 0 auto;max-width: 50%;display: block;}
+.contact-generic input[type="submit"]{margin: 0 auto;display: block;}
 #datetimepickerfront{color: #aaa;}
 
 /*ESTILOS ANDRES CRUZ - 08/02/2017*/
@@ -77,17 +39,31 @@ filter: grayscale(0);
 .topbarinner li a:hover,.topbarinner li.active a{background: none !important;border-bottom: 2px solid #FF0000;color: #fff;padding: 10px 0;}
 .droptownuser button{background: none;border: none;}
 .droptownuser li{display: block;}
-.droptownuser li a{display: block;background: url(../img/dropicons.svg) no-repeat;background-size: 30px;padding: 10px 15px 10px 42px;}
+.droptownuser li a{font-weight: 700;display: block;background: url(../img/dropicons.svg) no-repeat;background-size: 30px;padding: 10px 15px 10px 42px;}
 .droptownuser li a:hover{color: #999;}
 .droptownuser li:nth-child(1) a,.droptownuser li:nth-child(1) a:hover{background-position: 5px -3px;}
 .droptownuser li:nth-child(2) a,.droptownuser li:nth-child(2) a:hover{background-position: 5px -53px;}
 .droptownuser li:nth-child(3) a,.droptownuser li:nth-child(3) a:hover{background-position: 5px -101px;}
 .droptownuser li:nth-child(4) a,.droptownuser li:nth-child(4) a:hover{background-position: 5px -153px;}
-.droptownuser li:nth-child(5) a,.droptownuser li:nth-child(5) a:hover{background-position: 5px -256px;}
+.droptownuser li:nth-child(5) a,.droptownuser li:nth-child(5) a:hover{background-position: 5px -202px;}
 .droptownuser li:nth-child(6) a,.droptownuser li:nth-child(6) a:hover{background-position: 5px -201px;}
+
+/*Hack only firefox*/
+
+@-moz-document url-prefix() {
+ 
+.droptownuser li:nth-child(1) a,.droptownuser li:nth-child(1) a:hover{background-position: 5px 6px;}
+.droptownuser li:nth-child(2) a,.droptownuser li:nth-child(2) a:hover{background-position: 5px -44px;}
+.droptownuser li:nth-child(3) a,.droptownuser li:nth-child(3) a:hover{background-position: 5px -90px;}
+.droptownuser li:nth-child(4) a,.droptownuser li:nth-child(4) a:hover{background-position: 5px -139px;}
+.droptownuser li:nth-child(5) a,.droptownuser li:nth-child(5) a:hover{background-position: 5px -189px;}
+
+}
+
+
 .droptownuser .dropdown-menu li:last-child{margin:10px 0 0 0; }
 .iptransparent{background: rgba(204, 204, 204, 0.2) !important;}
-.iptransparent2{background: url(../img/pulldown.svg) 98% 15px no-repeat rgba(204, 204, 204, 0.2) !important;}
+.iptransparent2{background: url(../img/pulldown.svg) 98% 15px no-repeat rgba(204, 204, 204, 0.2) !important;padding: 9.5px 12px !important;}
 
 /*ESTILOS ANDRES CRUZ - 18/02/2017*/
 .centeredv2 label{display: block;text-align: center;margin: 20px 0;}
@@ -103,9 +79,11 @@ filter: grayscale(0);
 .picticket img{max-width: 100%;width: 100%;}
 .tactive{position: absolute;top: 0;left: 0;z-index: 2;max-width: 70px;width: 100%;}
 .dateticket{padding: 0 4px;}
-.dateticket h4{background: #FF0000; color: #fff; text-align: center; border-radius: 3px; padding: 14px 0; font-size: 20px; max-width: 50px; width: 100%; margin: 0 auto; }
-.dateticket h5{color: #A4A4A4; background: none; font-size: 19px; font-weight: normal; margin: 14px 0;} 
+.dateticket h4{background: #FF0000; color: #fff; text-align: center; border-radius: 3px; padding: 14px 0; font-size: 20px; max-width: 50px; width: 100%; margin: 0 auto; position: relative;}
+.dateticket h4:before{position: absolute; top: 26px; left: 15%; display: block; width: 37px; height: 1px; content: ""; background: #777; z-index: 1; }
+.dateticket h5{color: #A4A4A4; background: none; font-size: 19px; font-weight: normal; margin: 14px 0;text-align: center;} 
 .dateresume h4{color: #fff;}
+.dateresume h5{color: #fff;text-transform: capitalize;}
 .dateresume ul{margin: 0;padding: 0;list-style: none;}
 
 /*ESTILOS ANDRES CRUZ - 20/02/2017*/
@@ -128,4 +106,167 @@ filter: grayscale(0);
 .table-responsive{border-radius: 5px 5px 0 0;}
 .viewtable table td{color: #000;}
 .hr2{padding: 10px 0;}
-.topinfo{font-size: 12px;margin: 0 0 10px 0;}
+.topinfo{font-size: 13px;margin: 0 0 10px 0;}
+.closeaction{background: #959595; color: #fff; border-radius: 30px; border: none; position: absolute; top: 10px; right: 10px; z-index: 3; padding: 3px 6px; font-size: 13px; transition:all 0.3s; }
+.closeaction:hover,.closeaction.active{background: #FF0000;color: #fff;}
+.separator{margin: 0 0 50px 0;}
+.ui.button.alertui{display: block;margin: 20px 0 0 0;text-align: left;}
+ul.resumelist{border-top: 1px solid #AAA;margin: 0 0 0 20px;}
+/*ESTILOS ANDRES CRUZ - 23/02/2017*/
+.redprogress{margin: 10px 0 0 0}
+.redprogress .slider-handle{background: red;}
+.redprogress .slider-selection.tick-slider-selection,.redprogress .slider-tick.in-selection{background: rgb(245, 88, 88);}
+.redprogress .tooltip-inner{background: red;color: #fff;}
+.searchbox{margin: 0 0 50px 0;overflow: hidden;}
+.searchbox input[type="text"],.searchbox input[type="submit"]{display: inline-block;*display: inline;vertical-align: top;}
+.searchbox input[type="text"]{text-align: center;padding: 8px 5px;width: 90%;}
+.searchbox button[type="submit"]{background: #FF0000; color: #fff; font-size: 21px; border: none; padding: 6px 0; width: 8%; border-radius: 0; max-width: 100%; }
+.amountickets h6{text-align: center; margin: 0 0 25px 0;}
+.topnavnumber{margin: 0 0 30px 0;}
+.topnavnumber button{background: transparent;color: #fff; transition:all 0.2s;}
+.topnavnumber button:hover,
+.topnavnumber button.active{background-color: red;color: #fff !important;}
+.pounds{background: transparent;color: #fff;}
+.tbuyticket{    color: #fff; border-bottom: 2px solid #ccc; padding: 0 0 7px 0; margin: 50px 0 10px 0; font-size: 15px;}
+
+/*ESTILOS ANDRES CRUZ - 02/03/2017*/
+.sponsors{border: 8px solid #212121}
+.sponsors .add h3{    color: #fff; text-align: center; background: #C0C1C6; margin: 0; font-weight: 600; line-height: 1.5em; padding: 80% 0; font-size: 24px;}
+.tagscloud span{background: #FF0000; color: #fff; padding: 1px 8px; margin: 5px 1px; display: inline-block; border-radius: 8px; cursor: pointer; transition:all 0.2s; font-size: 12px;}
+.tagscloud span:hover{background: #7E7E7E;}
+.filterbtn button{background: #969696;border-radius: 0;color: #fff;border: none;transition:all 0.2s;}
+.filterbtn button:hover,.filterbtn button[aria-expanded="true"]{background-color: #FF0000 !important;color: #fff !important;}
+.filterbtn .dropdown-menu{padding: 0 5px; color: #919191; min-width: 200px; width: 100%; border-radius:0; padding: 0;margin: 0; }
+.filterbtn input[type="checkbox"]{-webkit-appearance: none; -moz-appearance: none; appearance: none; border: 2px solid #919191; background: #fff; padding: 7px; margin: 0 12px; border-radius: 3px; cursor: pointer;} 
+.filterbtn input[type="checkbox"]:checked{border: 2px solid #919191;background: url(../img/checkout.svg) no-repeat center center #fff;}
+.fade.blue .modal-content{background: #09152A;}
+.fade.blue h1{color: #fff; text-align: center;text-transform: capitalize;}
+.fade.blue p{margin: 40px 0;
+    text-align: center;
+    font-size: 15px;}
+.fade.blue button,.btnexten{max-width: 100%;width: 100%;}
+.fade.blue .close{color: #fff; text-align: right; opacity: 1; font-size: 30px;}
+/*whitout marge*/
+.fade.smarge .modal-content{background: #09152A;}
+.fade.smarge .modal-admin{width: 100%;max-width: 750px;}
+@media screen and (max-width: 768px) {
+  .modal-admin {width: 100%; max-width: 600px; margin: auto; } 
+  .fade.smarge{margin: 0;padding-left: 10px !important;padding-right: 10px !important;padding-top: 10px;}
+}
+.fade.smarge h1{color: #fff; text-align: center;text-transform: capitalize;}
+.fade.smarge p{margin: 20px 0;
+    text-align: left;
+    font-size: 15px;}
+.fade.smarge button,.btnexten{max-width: 100%;width: 100%;}
+.fade.smarge .close{color: #fff; text-align: right; opacity: 1; font-size: 30px;}
+.carpet{text-align: center;padding: 10px 0;}
+a:focus, a:hover{text-decoration: none !important;}
+
+/*ESTILOS ANDRES CRUZ - 06/03/2017*/
+.tagprom{background: url(../img/bottom-prom.png) no-repeat bottom center; position: absolute; top: 0; right: 25px; padding: 0 0 16px 0; background-size: contain; }
+.tagprom h2{color: #fff; background: #E21833; margin: 0; text-align: center; font-size: 15px; padding: 9px 4px;}
+.tagprom span{display: block; font-size: 26px;}
+
+/*ESTILOS ANDRES CRUZ - 07/03/2017*/
+.filtercity button{background: #969696; border-radius: 0; color: #fff; border: none; transition: all 0.2s; padding: 7px 12px; }
+.filtercity button:hover, .filtercity button[aria-expanded="true"] {background-color: #FF0000 !important; color: #fff !important; }
+.filtercity .glyphicon{padding: 0 6px 0px 0;}
+.filtercity input{border-radius: 0;}
+.filtercity .dropdown-menu{color: #919191; min-width: 200px; width: 100%; border-radius: 0; margin: 0; }
+.jevent{background: #212121;overflow: hidden;box-shadow: 0px 0px 17px #000;margin: 0 0 30px 0;}
+.navarrows{overflow: hidden;text-align: right;margin: 0;}
+.navarrows li{display: inline-block;*display: inline;*zoom:1;vertical-align: top;cursor: pointer;}
+.navarrows i.icon::before{color: #fff;font-size: 2em;font-weight: bold;}
+.navarrows i.icon:hover::before{color: #FF0000;}
+
+/*ESTILOS ANDRES CRUZ - 09/03/2017*/
+input.disabled,select.disabled,textarea.disabled{cursor: not-allowed;}
+
+/*ESTILOS ANDRES CRUZ - 18/03/2017 - 20/03/2017*/
+.ulinline li{display: inline-block;*display: inline;*zoom:1;vertical-align: bottom; margin: 0 10px 0 0;}
+#mapview{border: 13px solid #212121;
+box-shadow: 0px 1px 6px #000;}
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+.tblmap h3{text-align: center;}
+.tblmap .table-responsive{border-top: 4px solid #fff; padding: 17px 0; border-radius: 0; border-bottom: 4px solid #fff; margin: 0;}
+#mapview img{width: 100%;height: auto;}
+.scrollpanel2{height: 100%; max-height: 224px; overflow-y: scroll;}
+.thead{margin: 0;}
+.tbody,.thead,.thead th{border: none;}
+.tbody tr:hover > td{color: #fff;font-weight: 700; cursor: pointer;background-color: #FF0000 !important;}
+.tbody td{background:#D2D3D7; color: #09152A; border-top: 0 !important; border-left: 0 !important; border-right: 0 !important; border-bottom: 2px solid #000 !important;}
+.ballmenu{position: relative;}
+.ballmenu a{font-size: 12px; color: #fff; font-weight: 600; display: inline-block; text-align: center;padding: 22px 0 0 0;}
+.ballmenu a span{display: block; background: #D2D3D7; color: #fff; font-weight: bold; max-width: 25px; border-radius: 61px; padding: 1px 0; width: 100%; margin: 0 auto;}
+.ballmenu a:hover,.ballmenu a.active{color: #FF0000;}
+.ballmenu a:hover > span,.ballmenu a.active > span{color: #fff;background: #FF0000;}
+.ballmenu .btn-group{position: relative;z-index: 1;}
+.ballmenu .btn-group:nth-child(1){text-align: left;}
+.ballmenu .btn-group:nth-child(1) span{margin: 0;}
+.ballmenu .btn-group:nth-child(2){text-align: center;}
+.ballmenu .btn-group:nth-child(3){text-align: right;}
+.ballmenu .progress {height: 4px; margin-bottom: 0; overflow: hidden; background-color: #f5f5f5; border-radius: 20px; position: absolute; width: 95%; left: 15px; top: 50%;}
+.ballmenu .progress-bar-info{background: #FF0000;}
+.resumeli{border-right: 1px solid #fff; text-align: center;}
+.resumeli ul{list-style: none;margin: 0;padding: 0;}
+.resumeli ul li{text-align: left;}
+.resumeli ul span{color: #fff; font-weight: 700; text-align: right; padding: 0 18px 0 0; display: inline-block; max-width: 125px; width: 100%;}
+.resumeli .ui.button{margin: 20px 0 0 0;padding: 9px;font-size: 15px;}
+.resumelo h6{color: #fff;
+font-weight: 700;
+text-transform: capitalize;
+font-size: 14px;margin: 0;}
+.resumelo ul{list-style: none;
+margin: 18px 0 0 0;
+padding: 8px 0;
+border-top: 1px solid #909090;
+border-bottom: 1px solid #909090;}
+.resumelo ul li{margin: 3px 0;}
+.resumelo p{margin: 7px 0;}
+.resumelo p span{color: #fff; font-weight: bold;}
+.credidcart{border-right: 1px solid #fff;padding: 0 40px 0 0;}
+
+/*ESTILOS ANDRES CRUZ - 22/03/2017*/
+.credidcart h4{font-weight: bold; color: #fff; border-bottom: 1px solid #909090; font-size: 15px; padding: 0 0 10px 0; margin: 0 0 20px 0;}
+.credidcart ol{padding: 0;margin: 0;list-style: none;}
+.credidcart li{display: inline-block;vertical-align: top; margin: 0 20px 50px 0;}
+.credidcart li a{display: block;}
+.credidcart li a img{border-radius: 3px;border: 3px solid #fff;}
+.credidcart li a:hover img,.credidcart li a.active img{border: 3px solid red;}
+.formshadow{padding: 0 40px 0 0;}
+.formshadow h5{background: #212121; color: #fff; padding: 25px 0; font-size: 15px; box-shadow: 2px 2px 6px #000;}
+.formshadow form{background: #212121;box-shadow: 2px 2px 6px #000;}
+.formshadow label{font-size: 14px;font-weight: normal;}
+.formshadow h6{text-transform: inherit;}
+.formshadow h6 span{color: #fff;font-weight: bold;}
+.formshadow input[type="text"],.formshadow input[type="number"],.formshadow select{border: 2px solid #8e8e8e;}
+.formshadow button{max-width: 100%;width: 100%; font-size: 17px !important;font-weight: 700 !important;}
+.alertck{background: #D2D3D7;box-shadow: 2px 2px 6px #000;position: relative;z-index: 1; margin: 0 0 40px 0;}
+.alertck ul{margin: 0;padding: 20px 25px; list-style: none;}
+.alertck h5{background: #212121; color: #fff; padding: 25px 0; font-size: 15px; margin: 30px 0 0 0; box-shadow: none; } 
+.alertck ul li{color: #212121;text-align: justify;}
+.alertck h6{padding: 5px 30px; text-align: right;color: #212121; font-weight: 600;margin: 0;}
+.alertck p{padding: 20px 30px;color: #212121;}
+.alertck input{margin: 0;}
+.amountbox input{text-align: center;}
+.amountbox .input-group-addon{background: #D2D3D7;color: #000;font-weight: bold;border-radius: 0;}
+
+/*ESTILOS ANDRES CRUZ - 23/03/2017*/
+.borderg{border-right: 1px solid #fff;padding: 0 30px 0 0;}
+.tdcard{border:1px solid #909090;padding: 0 0 15px 0; border-radius: 6px;margin: 0 0 30px 0;}
+.tdcard ul{list-style: none;margin: 0;padding: 0;}
+.tdcard ul li{text-align: left;}
+.tdcard ul span{color: #fff; font-weight: 700; text-align: right; padding: 0 18px 0 0; display: inline-block; max-width: 125px; width: 100%;}
+.tdcard h3{border: none;text-align: center;color: #000;background: #D2D3D7; border-radius: 6px 6px 0 0;padding: 10px 0;
+font-weight: 600;font-size: 16px; overflow: hidden; margin: 0 0 15px 0;}
+.tdcard h3 span{float: right;margin: 0 10px 0 0;font-size: 19px;}
+
+.tdalert ul{list-style: none;margin: 0 auto;padding: 0;max-width: 400px;width: 100%;text-align: center;}
+.tdalert ul li{text-align: left;}
+.tdalert ul span{color: #fff; font-weight: 700; text-align: right; padding: 0 18px 0 0; display: inline-block; max-width: 159px; width: 100%;}
+.callbutton1{text-align: center;}
+.callbutton1 button{font-size: 17px !important;font-weight: 700 !important;display: inline-block;}
+.tdalert p{text-align: center; margin: 50px 0 0 0;}
+.tdalert p span,.tdalert p a{font-weight: bold;color: #fff;}

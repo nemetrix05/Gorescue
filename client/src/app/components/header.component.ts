@@ -14,13 +14,17 @@ import {User} from '../models/user';
 })
 
 export class HeaderComponent implements OnInit {
-		public title;
 
-	constructor(){
-		
+	public identity;
+	public token;
+
+	constructor(private _router:Router,
+		private _userService:UserService){
+		this.identity=this._userService.getIdentity();
+  		this.token=this._userService.getToken();
 	}
 
 	ngOnInit(){
-		console.log('Header component loaded');
+		//console.log('Header component loaded');
 	}
 }	

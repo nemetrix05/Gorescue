@@ -1,0 +1,39 @@
+
+<div class="page-inner">
+    <div class="container">
+    
+        <div class="content-area" *ngIf="identity">
+
+            <header class="page-header-form">
+                <h1 class="page-title" style="text-align: center; margin-top: 5%">{{title}}</h1>
+            </header>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <ul class="nav nav-pills topbarinner">
+                      <li role="presentation"><a href="UdashboardProfile.html">MIS DATOS</a></li>
+                      <li role="presentation" class="active"><a href="#">TICKETS</a></li>
+                      <li role="presentation"><a href="UdashWhislist.html">WISHLIST</a></li>
+                      <li role="presentation"><a href="UdashSale.html">VENDER</a></li>
+                    </ul>                            
+                </div>                                
+            </div>
+
+            <div class="entry-content">
+                <div class="col-md-10 col-md-offset-1 contact-generic">   
+
+                    <router-outlet></router-outlet>    
+                                                                                                                                                               
+                </div><!--#END contain form-->
+                    
+            </div>
+
+        </div> <!-- END #primary -->
+
+        <div class="content-area" *ngIf="!identity">
+            <h1>Error</h1>
+            No tiene autorización para esta seccion
+        </div>
+        
+    </div>
+</div> <!-- END .page-inner -->

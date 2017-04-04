@@ -1,5 +1,6 @@
 
 <!-- REGISTER FAN -->
+<info-message></info-message>
 <div class="page-inner">
     <div class="container">
     
@@ -19,7 +20,8 @@
             </div>
 
             <div class="entry-content">
-                                  
+                <button type="button" class="btn btn-default" (click)="navigateTest()">NAvigate</button>
+
                     <form [formGroup]="registerFanForm" (ngSubmit)="onSubmit()" class="row contact-generic">
 
                         <div class="col-md-10 col-md-offset-1">
@@ -31,6 +33,7 @@
                                 <input id="txt_email" class="input_text required column" type="email" formControlName="email" [(ngModel)]="user.email" >
                                 <script type="text/javascript">console.log(registerFanForm.controls.email)</script>
                                 <control-messages [control]="registerFanForm.controls.email"></control-messages>
+                                
                                 
                             </div>    
 
@@ -147,15 +150,11 @@
                                         <control-messages [control]="registerFanForm.controls.terms"></control-messages>                     
                                     </div>                                                           
                                     <div class="form-row field_submit">
-                                        <input type="submit" value="Enviar" class="ui button colored" [disabled]="!registerFanForm.valid">
-                                        <span class="loading hide"><img src="assets/img/preloader.gif"></span>
+                                        <input type="submit" value="Enviar" class="ui button colored" [disabled]="!registerFanForm.valid && !loading">
+                                        <span class="loading" [ngClass]="{'hide':!loading}"><img src="assets/img/preloader.gif"></span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-row notice_bar">
-                                <p class="notice notice_ok" *ngIf="message">{{message}}</p>
-                                <p class="notice notice_error" *ngIf="errorMessage">{{errorMessage}}</p>
-                            </div>                                                                                                                                               
+                            </div>                                                                                                                                             
                         </div><!--#END contain form-->
 
 

@@ -1,5 +1,9 @@
 import { FormControl, FormGroup} from '@angular/forms';
 
+import {Observable} from 'rxjs/Rx';
+import 'rxjs/Rx';
+
+
 export class ValidationService {
     static getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
         let config = {
@@ -14,7 +18,8 @@ export class ValidationService {
             'digits':'Digite únicamente números',
             'date':'Formato de fecha no válido',
             'url':'Formato de url incorrecto. Utilice el prefijo http:// o https://',
-            'choice':`Se requiere al menos ${validatorValue.min} campo y máximo ${validatorValue.max}`
+            'choice':`Se requiere al menos ${validatorValue.min} campo y máximo ${validatorValue.max}`,
+            'async':`email taken`
         };
         return config[validatorName];
     }
@@ -87,6 +92,25 @@ export class ValidationService {
                     }
                 };
             }
+        }
+    }
+
+    static async(userService,param){
+        return (control: FormControl):Observable<any> => {
+            return new Observable((obs:any) => {
+                control.valueChanges.debounceTime(400).flatMap(userService.userExists(param)).subscribe(
+                    response => {
+                        console.log(response);
+                        obs.next({ 'async': true });
+                        obs.complete();
+                    },
+                    error => {
+                        console.log(error);
+                        obs.next(null);
+                        obs.complete();
+                    }
+                )
+            });
         }
     }
 }

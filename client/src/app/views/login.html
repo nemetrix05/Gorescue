@@ -1,0 +1,50 @@
+<div class="page-inner">
+	<div class="container">
+
+		<div class="content-area">
+
+            <header class="page-header">
+                <h1 class="page-title" style="text-align: center; margin-top: 5%">Ingresa a GoTicket</h1>
+            </header>
+
+            <div class="ui two column centered grid">
+                <h4 style="margin-bottom: 0">Ingresa con:</h4>
+                <div class="centered row">
+                        <a href="#" class="ui twitter button" style="margin: 5px"><i class="twitter icon"></i>Twitter</a>
+                        <a href="#" class="ui facebook button" style="margin: 5px"><i class="facebook icon"></i>FaceBook</a>
+                        <a href="#" class="ui google plus button" style="margin: 5px"><i class="google plus icon"></i>Google</a>
+                </div>
+            </div>
+
+            <div class="entry-content">
+
+					<div *ngIf="errorMessage">
+						<div class="alert alert-info">
+								<strong>Error</strong> {{errorMessage}}
+						</div>
+					</div>
+                    <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="ui two column centered grid">
+                        <div class="centered row field_text" style="margin-top: 30px">
+                            <label for="contact_phone">E-mail</label><br>
+                            <input class="input_text required column" type="email" #email="ngModel" [(ngModel)]="user.email" name ="email" required >
+                        </div>
+                        <div class=" centered row field_text">
+                            <label for="contact_password">Contraseña</label><br>
+                            <input class="input_text required column" type="password" value="" #password="ngModel" [(ngModel)]="user.password" name ="password">
+                        <h6 style="text-transform: none; letter-spacing:0; font-size: 11px; font-family:'Open Sans'; margin-top: 10px; margin-bottom: 0">Si aún no te has registrado, hazlo <a [routerLink]="['/register']">aquí</a></h6>
+                        </div>
+                        <div class="form-row field_submit">
+                            <input type="submit" value="Enviar" class="ui button colored">
+                            <span class="loading hide"><img src="../../assets/img/preloader.gif"></span>
+                        </div>
+                        <div class="form-row notice_bar">
+                            <p class="notice notice_ok hide">Gracias por Registrarte.</p>
+                            <p class="notice notice_error hide">Debido a un error desconocido tu registro no ha podido ser efectuado. Por favor intenta registrarte luego.</p>
+                        </div>
+                    </form> <!-- END #contact_form -->
+            </div>
+		</div> <!-- END #primary -->
+	</div>
+
+
+</div> <!-- END .page-inner -->

@@ -59,9 +59,6 @@ export class RegisterProducerComponent implements OnInit {
 			'','','','',[],[]);
 	}
 
-	cbclick(){
-		console.log(this.selEventTypes);
-	}
 
 	ngOnInit(){
 		this.loadFormData();
@@ -102,7 +99,7 @@ export class RegisterProducerComponent implements OnInit {
 		for (let evtype of this.eventTypes) {
 			this.selEventTypes[evtype.value]=false;
 		}
-		console.log(this.selEventTypes);
+		//console.log(this.selEventTypes);
 	}
 
 	/**
@@ -144,13 +141,14 @@ export class RegisterProducerComponent implements OnInit {
 	 * Envia los datos de la forma
 	 **/
 	public onSubmit(){
+
 		for (let key in this.selEventTypes) {
     		let value = this.selEventTypes[key];
     		if(value){
     			this.producer.eventTypes.push(key);
     		}
 		}
-		console.log(this.producer.eventTypes);
+
 		this._producerService.registerProducer(this.producer).subscribe(
 	  		response => {
 	  			let producer=response.producer;

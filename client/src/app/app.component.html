@@ -1,45 +1,63 @@
 <div id="page" class="hfeed site">
-		
+
     <!-- Import header component -->
 	<header-main></header-main>
 
     <div id="boxed_content" class="boxed_content">
         <div class="inner">
-        
+
 	        <!-- Main menú -->
 	        <nav id="primary-navigation" class="site-navigation primary-navigation clearfix" role="navigation">
 	            <button class="menu-toggle"><i class="large content icon"></i></button>
 	            <a href="#content" class="screen-reader-text skip-link">Skip to content</a>
 	            <div class="menu-all-pages-container">
-	                <ul class="nav-menu">
-	                    <li class="menu-item"><a href="index.html">Home</a></li>
-	                    <li class="menu-item"><a href="#">Reventa</a></li>
-	                    <li class="menu-item"><a href="#">Streaming</a></li>
-	                    <li class="menu-item"><a href="page_events.html">Eventos</a></li>
-	                    <li class="menu-item"><a href="#">WishList</a></li>
-	                    <li class="menu-item"><a href="#">Productores</a></li>
-	                </ul>
+	                 <ul class="nav-menu">
+                        
+                        <li class="current-menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="page_events.html">Eventos</a></li>
+                        <li class="menu-item"><a href="promotions.html">Promociones</a></li>
+                        <li class="menu-item"><a href="#">Productores</a></li>
+                        
+                    </ul>
 	            </div>
 
-	            <ul class="header_social">
-	                <li style="padding-left: 10px; padding-right: 10px;"><a href="login.html">Ingresa</a></li>
+	            <ul class="header_social" *ngIf="!identity">
+	            	<li style="padding-right: 10px;"><a [routerLink]="['/register']">Regístrate</a></li>
+	                <li style="padding-left: 10px; padding-right: 10px;"><a [routerLink]="['/login']">Ingresa</a></li>
 	            </ul>
+
+	            <ul class="header_social droptownuser" *ngIf="identity">
+                    <li style="padding-left: 10px; padding-right: 10px;">
+                        <div class="btn-group">
+                          <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hola, {{identity.name}} <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="UdashboardProfile.html">Mis datos</a></li>
+                            <li><a href="UdashTicketsInfo.html">Mis Tickets</a></li>
+                            <li><a href="UdashWhislist.html">Wishlist</a></li>
+                            <li><a href="UdashSale.html">Vender</a></li>
+                            <li><a style="cursor: pointer" (click)="logOut()">Cerrar sesión</a></li>
+                          </ul>
+                        </div>
+                    </li>
+                </ul>
 	        </nav>
 
 
 
 	        <!-- Import content from components -->
-			<div id="content" class="site-content single">
+			<div id="content" class="site-content">
 				<router-outlet></router-outlet>
 			</div>
 			<!-- END #content -->
 
-			
+
         </div>
 	</div> <!-- END #boxed-wrapper -->
 
 
     <!-- import footer component -->
     <footer-main></footer-main>
-   
+
 </div><!-- END #page -->

@@ -1,0 +1,100 @@
+<h5>{{title}}</h5>                                                                                                          
+<div class="row">
+
+    <article class="col-md-12" *ngIf="errorMessage">
+        <div class="row eventk">
+            <img src="../../../assets/img/ticket-front.png">
+            <h3>{{errorMessage}}</h3>
+            <div class="col-md-6 col-md-offset-3">  
+                <a [routerLink]="['/user-dashboard/tickets/',1]" class="vplace">< Volver a mis tickets</a>
+            </div>
+
+        </div>
+    </article>
+
+    <article class="col-md-12" *ngIf="ticket">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="picticket">
+                    <img src="../../../assets/img/event-poster2.jpg">
+                    <span class="tdisable"><img src="../../../assets/img/flag-red.svg"></span>
+                </div>  
+            </div>
+            <div class="col-md-1 dateticket">
+                <h4>{{ticket.event.date | date:"dd"}}</h4>
+                <h5>{{ticket.event.date | date:"MMM"}}</h5>
+            </div>
+            <div class="col-md-5 dateresume">
+                <h4>{{ticket.event.title}}</h4>
+                <ul>
+                    <li><span class="glyphicon glyphicon-time"></span> {{ticket.event.date | date:"MMM dd, y h:mm a"}}</li>
+                    <li><span class="glyphicon glyphicon-map-marker"></span> {{ticket.event.venue.stage}}</li>
+                    <li><span class="glyphicon glyphicon-screenshot"></span> Sector: {{ticket.section}} - Fila: {{ticket.row}} - Silla(s) :{{ticket.seat}}</li>
+                    <li><span class="glyphicon glyphicon-sound-dolby"></span> Entrada: {{ticket.section}}</li>
+                    <li><a href="#" class="vplace">Ver lugar del evento</a></li>
+                </ul>
+            </div>
+        </div>      
+
+        <div class="col-md-12">
+            
+            <div class="hr"></div>
+
+            <div class="viewtable">
+
+                <div class="table-responsive"> 
+
+                    <table class="table table-bordered">
+                        <tr class="headtable">
+                          <td>Fecha de la compra</td>
+                          <td>Código</td>
+                          <td>Precio</td>
+                          <td>Cargo</td>
+                          <td>Subtotal</td>
+                          <td>Total</td>                                                     
+                        </tr>    
+                        <tr>
+                          <td>{{ticket.purchaseDate | date:"dd.mm.yyyy"}}</td>
+                          <td>{{ticket._id}}</td>
+                          <td>{{ticket.price | currency:'COP'}}</td>
+                          <td>{{ticket.charge | currency:'COP'}}</td>
+                          <td>{{ticket.subtotal | currency:'COP'}}</td>
+                          <td>{{ticket.total | currency:'COP'}}</td>                                                     
+                        </tr>      
+                    </table>    
+
+                </div> 
+
+                <div class="hr"></div>   
+
+                <div class="table-responsive"> 
+
+                    <table class="table table-bordered">
+                        <tr class="headtable">
+                          <td>Sección</td>
+                          <td>Fila</td>
+                          <td>Silla</td>
+                          <td>Estado</td>
+                          <td>QR</td>
+                          <td></td>                                                     
+                        </tr>    
+                        <tr>
+                          <td>{{ticket.section}}</td>
+                          <td>{{ticket.row}}</td>
+                          <td>{{ticket.seat}}</td>
+                          <td>{{ticket.used?'Usado':'Activo'}}</td>
+                          <td>Generar QR</td>
+                          <td>Descargar/Enviar</td>                                                     
+                        </tr>                                                                                                                  
+                    </table>    
+
+                </div>       
+
+                <a [routerLink]="['/user-dashboard/tickets/',1]" class="vplace">< Volver a mis tickets</a>                                             
+
+            </div><!--end viewtable-->
+        </div>
+
+    </article>      
+
+</div>

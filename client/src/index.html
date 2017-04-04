@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
+    <!-- Cli automatic settings
+    ========================================================================= -->
+    <base href="/">
+
     <!-- Mobile Specific 
     ========================================================================= -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
@@ -12,10 +16,12 @@
     ========================================================================= -->
     <title>Client</title>
 
-    <!-- Cli automatic settings
+     <!-- Browser Specical Files
     ========================================================================= -->
-    <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    
     <!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
 
     <!-- Site Favicon
@@ -24,23 +30,23 @@
 
     <!-- WP HEAD
     ========================================================================= -->
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/css/semantic.min.css">
+    <link rel="stylesheet" href="../../assets/css/royalslider.css">
+    <link rel="stylesheet" href="../../assets/css/rs-default.css">
+    <link rel="stylesheet" href="../../assets/css/music-player.css">
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/own-style.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/semantic.min.css">
-    <link rel="stylesheet" href="assets/css/royalslider.css">
-    <link rel="stylesheet" href="assets/css/rs-default.css">
-    <link rel="stylesheet" href="assets/css/music-player.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/own-style.css">
-    <!--datepicker css-->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
     
     <!-- Header JS -->
-    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="../../assets/js/jquery-1.11.1.min.js"></script>
 
 </head>
 <body>
@@ -48,21 +54,47 @@
 
 
 	<!-- Footer JS -->
-    <script type="text/javascript" src="assets/js/libs/semantic.min.js"></script>
-    <script type="text/javascript" src="assets/js/libs/fitVids.min.js"></script>
-    <script type="text/javascript" src="assets/js/libs/retina.min.js"></script>
-    <script type="text/javascript" src="assets/js/libs/jquery.plugin.min.js"></script>
-    <script type="text/javascript" src="assets/js/libs/jquery.countdown.min.js"></script>
-    <script type="text/javascript" src="assets/js/libs/jquery.royalslider.min.js"></script>
-    <script type="text/javascript" src="assets/js/libs/jquery.easing-1.3.js"></script>
-    <script type="text/javascript" src="assets/js/libs/jquery.jplayer.js"></script>
-    <script type="text/javascript" src="assets/js/libs/ttw-music-player.js"></script>
-    <script type="text/javascript" src="assets/js/libs/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="assets/js/libs/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="assets/js/libs/jquery.imagesloaded.min.js"></script>
-    <script type="text/javascript" src="assets/js/libs/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="assets/js/global.js"></script>
+    <script src="../../assets/js/libs/semantic.min.js"></script>
+    <script src="../../assets/js/libs/fitVids.min.js"></script>
+    <script src="../../assets/js/libs/retina.min.js"></script>
+    <script src="../../assets/js/libs/jquery.plugin.min.js"></script>
+    <script src="../../assets/js/libs/jquery.countdown.min.js"></script>
+    <script src="../../assets/js/libs/jquery.royalslider.min.js"></script>
+    <script src="../../assets/js/libs/jquery.easing-1.3.js"></script>
+    <script src="../../assets/js/libs/jquery.jplayer.js"></script>
+    <script src="../../assets/js/libs/ttw-music-player.js"></script>
+    <script src="../../assets/js/libs/owl.carousel.min.js"></script>
+    <script src="../../assets/js/libs/jquery.magnific-popup.min.js"></script>
+    <script src="../../assets/js/libs/jquery.imagesloaded.min.js"></script>
+    <script src="../../assets/js/libs/isotope.pkgd.min.js"></script>
+    <script src="../../assets/js/global.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript">
+        // Dropdown atributes 
+        $('.dropdown-toggle').dropdown();
+        // Modal atributes 
+        $('#modalinfo').modal('hide');
+        // carrusel patrocinadores
+        $(".home_album_carousel").owlCarousel({
+            items : 1,
+            itemsDesktop: [1199,2],
+            itemsDesktopSmall: [979,1],
+            itemsTablet: [768,2],
+            lazyLoad : true,
+            autoplay: true,
+            loop: true
+        });        
+        // Nav event
+        var owl = $('.owl-carousel');
+        owl.owlCarousel();
 
-    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+        // Nav next and prev
+        $('.customNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        });
+        $('.customPrevBtn').click(function() {
+            owl.trigger('prev.owl.carousel');
+        });           
+    </script>
 </body>
 </html>

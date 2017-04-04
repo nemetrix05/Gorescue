@@ -1,0 +1,85 @@
+<h5>{{title}}</h5>                                                                
+<div class="row">
+    
+    <user-tickets-menu [selectedMenu]="'PRÓXIMOS EVENTOS'"></user-tickets-menu>   
+
+    <div class="text-center">
+    <span class="loading" [ngClass]="{'hide':!loading}"><img src="assets/img/preloader.gif"></span>
+    <div>
+    <article class="col-md-9" *ngIf="errorMessage">
+        <div class="row eventk">
+            <img src="../../../assets/img/ticket-front.png">
+            <h3>{{errorMessage}}</h3>
+            <div class="col-md-6 col-md-offset-3">  
+                <input type="submit" value="BUSCAR EVENTOS" id="contact_submit" class="ui button">
+            </div>
+
+        </div>
+    </article>
+
+    <article class="col-md-9" *ngIf="!tickets.length>0 && !errorMessage && !loading">
+        <div class="row eventk">
+            <img src="../../../assets/img/ticket-front.png">
+            <h3>No tienes ningún Ticket para un próximo evento</h3>
+            <div class="col-md-6 col-md-offset-3">  
+                <input type="submit" value="BUSCAR EVENTOS" id="contact_submit" class="ui button">
+            </div>
+
+        </div>
+    </article>  
+
+    <article class="col-md-9" *ngIf="tickets.length>0 && !errorMessage && !loading">
+        <div *ngFor="let ticket of tickets; let i=index">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <a [routerLink]="['/user-dashboard/ticket/',ticket._id]">
+                        <div class="picticket">
+                            <img src="../../../assets/img/event-poster2.jpg">
+                            <span class="tactive"><img src="../../../assets/img/flag-red.svg"></span>
+                        </div>  
+                    </a>
+                </div>
+                <div class="col-md-1 dateticket">
+                    <h4>{{ticket.event.date | date:"dd"}}</h4>
+                    <h5>{{ticket.event.date | date:"MMM"}}</h5>
+                </div>
+                <div class="col-md-5 dateresume">
+                    <h4>{{ticket.event.title}}</h4>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-time"></span> {{ticket.event.date | date:"MMM dd, y h:mm a"}}</li>
+                        <li><span class="glyphicon glyphicon-map-marker"></span> {{ticket.event.venue.stage}}</li>
+                        <li><span class="glyphicon glyphicon-screenshot"></span> Sector: {{ticket.section}} - Fila: {{ticket.row}} - Silla(s) :{{ticket.seat}}</li>
+                        <li><span class="glyphicon glyphicon-sound-dolby"></span> Entrada: {{ticket.section}}</li>
+                    </ul>
+                </div>
+            </div>       
+
+            <div class="hr"></div>
+
+        </div>
+
+         <div class="row">
+            <div class="col-md-12">
+
+                <nav aria-label="Page navigation" class="pgnavigation">
+                  <ul class="pagination">
+                    <li>
+                      <a [routerLink]="['/user-dashboard/tickets/',prev_page]" aria-label="Previous" *ngIf="prev_page!=cur_page">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li *ngFor="let p of pages;" [ngClass]="{'active':p==cur_page}"><a [routerLink]="['/user-dashboard/tickets/',p]">{{p}}</a></li>
+                    <li>
+                      <a [routerLink]="['/user-dashboard/tickets/',next_page]" aria-label="Next" *ngIf="next_page!=cur_page">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav><!--pager-->                                           
+            </div>
+        </div>                                           
+
+    </article> 
+
+</div> 
